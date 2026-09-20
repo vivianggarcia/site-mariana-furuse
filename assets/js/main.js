@@ -169,14 +169,14 @@
       desc: "Alívio imediato da dor e preservação do dente natural com Raio X digital na hora.",
       cat: "canal",
       tag: "Destaque",
-      home: true
+      home: false
     },
     {
       id: "restauracoes",
       title: "Restaurações Estéticas em Resina",
       desc: "Resinas de alta tecnologia no tom exato dos seus dentes para estética e mastigação.",
       cat: "estetica",
-      home: true
+      home: false
     },
     {
       id: "estetica-lentes",
