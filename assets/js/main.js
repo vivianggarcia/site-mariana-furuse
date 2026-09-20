@@ -183,7 +183,7 @@
       title: "Estética Dental & Lentes de Porcelana",
       desc: "Harmonização do sorriso com laminados cerâmicos e restaurações de altíssima durabilidade.",
       cat: "estetica",
-      home: true
+      home: false
     },
     {
       id: "bruxismo",
