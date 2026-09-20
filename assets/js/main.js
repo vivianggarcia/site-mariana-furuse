@@ -107,6 +107,11 @@
         title: "Estética Dental & Restaurações",
         before: "assets/casos/antes-estetica.jpg",
         after: "assets/casos/depois-estetica.jpg"
+      },
+      esportivo: {
+        title: "Protetor Bucal Esportivo Personalizado",
+        before: "assets/casos/antes-protetor.jpg",
+        after: "assets/casos/depois-protetor.jpg"
       }
     };
     var compareTitle = document.getElementById("compare-title");
@@ -178,18 +183,18 @@
       title: "Estética Dental & Lentes de Porcelana",
       desc: "Harmonização do sorriso com laminados cerâmicos e restaurações de altíssima durabilidade.",
       cat: "estetica",
-      home: true,
-      thumb: "assets/casos/depois-estetica.jpg",
-      before: "assets/casos/antes-estetica.jpg",
-      after: "assets/casos/depois-estetica.jpg"
+      home: true
     },
     {
       id: "bruxismo",
       title: "Placa de Bruxismo (Placa Oclusal)",
       desc: "Proteção contra o desgaste dos dentes e alívio de dores na articulação (DTM), feita sob medida.",
       cat: "bruxismo",
+      tag: "Resultado Real",
       home: true,
-      thumb: "assets/casos/placa-bruxismo.jpg"
+      thumb: "assets/casos/depois-bruxismo.jpg",
+      before: "assets/casos/antes-bruxismo.jpg",
+      after: "assets/casos/depois-bruxismo.jpg"
     },
     {
       id: "protetor",
@@ -199,6 +204,8 @@
       tag: "Trabalhos Reais",
       home: true,
       thumb: "assets/casos/protetor-lopes.jpg",
+      before: "assets/casos/antes-protetor.jpg",
+      after: "assets/casos/depois-protetor.jpg",
       gallery: [
         "assets/casos/protetor-lopes.jpg",
         "assets/casos/protetor-prates.jpg",
@@ -217,17 +224,21 @@
         return s.home && (filter === "todos" || s.cat === filter);
       }).forEach(function (s) {
         var el = document.createElement("article");
-        el.className = "flex items-start gap-4 bg-white rounded-2xl border border-bege-200 p-5 hover:border-verde-300 transition-colors";
-        var thumbHtml = s.thumb
-          ? '<img src="' + s.thumb + '" alt="' + s.title + ' &ndash; Dra. Mariana Furuse, Araçatuba SP" loading="lazy" width="56" height="56" class="w-14 h-14 rounded-xl object-cover shrink-0" />'
-          : '<div class="w-14 h-14 rounded-xl bg-verde-100 text-verde-700 flex items-center justify-center shrink-0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2c-1.5 3-5 3-5.7.3C5.7 .7 6.5 -0.3 8 0"/></svg></div>';
+        var thumbHtml;
+        if (s.thumb) {
+          el.className = "flex items-start gap-4 bg-white rounded-2xl border border-bege-200 p-5 hover:border-verde-300 transition-colors";
+          thumbHtml = '<img src="' + s.thumb + '" alt="' + s.title + ' &ndash; Dra. Mariana Furuse, Araçatuba SP" loading="lazy" width="56" height="56" class="w-14 h-14 rounded-xl object-cover shrink-0" />';
+        } else {
+          el.className = "flex items-start gap-4 bg-verde-50/60 rounded-2xl border border-verde-100 p-5 hover:border-verde-300 transition-colors";
+          thumbHtml = '';
+        }
         el.innerHTML =
           thumbHtml +
           '<div class="flex-1">' +
             (s.tag ? '<span class="text-[10px] uppercase tracking-wide text-verde-600 font-semibold">' + s.tag + '</span>' : '') +
             '<h3 class="font-display text-base text-verde-800 mt-0.5">' + s.title + '</h3>' +
             '<p class="text-sm text-tinta/65 mt-1 leading-relaxed">' + s.desc + '</p>' +
-            '<a href="servicos.html#' + s.id + '" class="inline-flex items-center gap-1 mt-2 text-sm text-verde-600 hover:text-verde-800 font-medium">Ver detalhes e fotos <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>' +
+            '<a href="servicos.html#' + s.id + '" class="inline-flex items-center gap-1 mt-2 text-sm text-verde-600 hover:text-verde-800 font-medium">Saiba mais <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>' +
           '</div>';
         serviceList.appendChild(el);
       });
