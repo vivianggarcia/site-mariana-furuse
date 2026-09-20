@@ -3,6 +3,9 @@ module.exports = {
   content: ["./*.html", "./src/**/*.{html,js}"],
   theme: {
     extend: {
+      screens: {
+        nav: "1200px",
+      },
       colors: {
         verde: {
           DEFAULT: "#66857b",

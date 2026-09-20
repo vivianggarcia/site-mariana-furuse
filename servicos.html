@@ -87,8 +87,8 @@
 
 <!-- Header -->
 <header class="sticky top-0 z-50 bg-bege-50/90 backdrop-blur border-b border-bege-200">
-  <div class="container-page flex items-center justify-between py-3">
-    <a href="index.html" class="flex items-center gap-3">
+  <div class="container-page flex items-center justify-between gap-4 py-3">
+    <a href="index.html" class="flex items-center gap-3 shrink-0">
       <img src="assets/logos/symbol-green-on-transparent.png" alt="Símbolo Dra. Mariana Furuse" class="h-9 w-auto" />
       <span class="leading-tight">
         <span class="block font-display text-lg text-verde-800">Dra. Mariana Furuse</span>
@@ -96,29 +96,29 @@
       </span>
     </a>
 
-    <nav class="hidden lg:flex items-center gap-7">
-      <a href="index.html#primeira-consulta" class="nav-link">Primeira Consulta</a>
-      <a href="servicos.html" class="nav-link text-verde-700 font-medium">Serviços &amp; Casos</a>
-      <a href="index.html#como-funciona" class="nav-link">Como Funciona</a>
-      <a href="index.html#depoimentos" class="nav-link">Depoimentos</a>
-      <a href="index.html#sobre" class="nav-link">Sobre a Dra.</a>
-      <a href="index.html#faq" class="nav-link">FAQ</a>
-      <a href="index.html#contato" class="nav-link">Contato</a>
+    <nav class="hidden nav:flex items-center gap-4 xl:gap-6 shrink-0">
+      <a href="index.html#primeira-consulta" class="nav-link whitespace-nowrap">Primeira Consulta</a>
+      <a href="servicos.html" class="nav-link text-verde-700 font-medium whitespace-nowrap">Serviços &amp; Casos</a>
+      <a href="index.html#como-funciona" class="nav-link whitespace-nowrap">Como Funciona</a>
+      <a href="index.html#depoimentos" class="nav-link whitespace-nowrap">Depoimentos</a>
+      <a href="index.html#sobre" class="nav-link whitespace-nowrap">Sobre a Dra.</a>
+      <a href="index.html#faq" class="nav-link whitespace-nowrap">FAQ</a>
+      <a href="index.html#contato" class="nav-link whitespace-nowrap">Contato</a>
     </nav>
 
-    <div class="hidden lg:flex items-center gap-3">
-      <a href="index.html#contato" class="btn-secondary !px-5 !py-2.5">Agendar</a>
-      <a href="https://wa.me/5518996001588?text=Ol%C3%A1%20Dra.%20Mariana!%20Gostaria%20de%20agendar%20minha%20Primeira%20Consulta%20na%20cl%C3%ADnica." target="_blank" rel="noopener" class="btn-primary !px-5 !py-2.5">
+    <div class="hidden nav:flex items-center gap-3 shrink-0">
+      <a href="index.html#contato" class="btn-secondary !px-5 !py-2.5 whitespace-nowrap">Agendar</a>
+      <a href="https://wa.me/5518996001588?text=Ol%C3%A1%20Dra.%20Mariana!%20Gostaria%20de%20agendar%20minha%20Primeira%20Consulta%20na%20cl%C3%ADnica." target="_blank" rel="noopener" class="btn-primary !px-5 !py-2.5 whitespace-nowrap">
         WhatsApp
       </a>
     </div>
 
-    <button id="menu-toggle" class="lg:hidden p-2 text-verde-800" aria-label="Abrir menu de navegação">
+    <button id="menu-toggle" class="nav:hidden p-2 text-verde-800" aria-label="Abrir menu de navegação">
       <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
     </button>
   </div>
 
-  <div id="mobile-menu" data-open="false" class="lg:hidden border-t border-bege-200 bg-bege-50">
+  <div id="mobile-menu" data-open="false" class="nav:hidden border-t border-bege-200 bg-bege-50">
     <div class="container-page py-4 flex flex-col gap-1">
       <a href="index.html#primeira-consulta" class="py-2.5 nav-link">Primeira Consulta</a>
       <a href="servicos.html" class="py-2.5 nav-link text-verde-700 font-medium">Serviços &amp; Casos</a>
@@ -221,58 +221,55 @@
 
   <!-- CANAL -->
   <section id="canal" class="py-16 sm:py-20 bg-white border-t border-bege-200">
-    <div class="container-page grid lg:grid-cols-5 gap-10 items-center">
-      <div class="lg:col-span-2">
-        <div class="w-16 h-16 rounded-2xl bg-verde-100 text-verde-700 flex items-center justify-center">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2c-1.5 3-5 3-5.7.3M12 2c1.5 3 5 3 5.7.3M12 2v20"/></svg>
+    <div class="container-page">
+      <div class="relative overflow-hidden rounded-3xl bg-verde-800 text-bege-50 px-6 py-12 sm:px-14 sm:py-16">
+        <svg class="absolute -right-8 -top-10 w-56 h-56 text-verde-700/50 pointer-events-none select-none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.6" aria-hidden="true"><path d="M12 2c-1.5 3-5 3-5.7.3M12 2c1.5 3 5 3 5.7.3M12 2v20"/></svg>
+        <svg class="absolute -left-10 -bottom-12 w-40 h-40 text-verde-700/40 pointer-events-none select-none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.5" aria-hidden="true"><circle cx="12" cy="12" r="9"/></svg>
+        <div class="relative max-w-2xl">
+          <span class="eyebrow !bg-verde-700 !text-bege-100">Urgência &amp; Canal</span>
+          <h2 class="font-display text-3xl sm:text-4xl text-bege-50 mt-4">Endodontia (Tratamento de Canal &amp; Urgências)</h2>
+          <p class="mt-5 text-bege-100/85 leading-relaxed text-lg">Alívio imediato da dor e preservação do dente natural, com sensor de Raio X digital na própria clínica para identificar a causa da dor no mesmo instante e realizar o atendimento de forma ágil, resolutiva e sem dor. A Dra. Mariana possui atualização em Endodontia pelo INSPE CURSOS.</p>
+          <a href="https://wa.me/5518996001588?text=Ol%C3%A1%20Dra.%20Mariana!%20Estou%20com%20dor%20de%20dente%2C%20preciso%20de%20atendimento%20de%20urg%C3%AAncia%20%2F%20canal." target="_blank" rel="noopener" class="btn-light mt-8">Falar sobre Urgência</a>
         </div>
-      </div>
-      <div class="lg:col-span-3">
-        <span class="eyebrow">Urgência &amp; Canal</span>
-        <h2 class="font-display text-3xl text-verde-800 mt-3">Endodontia (Tratamento de Canal &amp; Urgências)</h2>
-        <p class="mt-4 text-tinta/70 leading-relaxed">Alívio imediato da dor e preservação do dente natural, com sensor de Raio X digital na própria clínica para identificar a causa da dor no mesmo instante e realizar o atendimento de forma ágil, resolutiva e sem dor. A Dra. Mariana possui atualização em Endodontia pelo INSPE CURSOS.</p>
-        <a href="https://wa.me/5518996001588?text=Ol%C3%A1%20Dra.%20Mariana!%20Estou%20com%20dor%20de%20dente%2C%20preciso%20de%20atendimento%20de%20urg%C3%AAncia%20%2F%20canal." target="_blank" rel="noopener" class="btn-primary mt-7">Falar sobre Urgência</a>
       </div>
     </div>
   </section>
 
   <!-- RESTAURAÇÕES -->
   <section id="restauracoes" class="py-16 sm:py-20 bg-bege-100 border-t border-bege-200">
-    <div class="container-page grid lg:grid-cols-5 gap-10 items-center">
+    <div class="container-page grid lg:grid-cols-5 gap-10 items-start">
       <div class="lg:col-span-2">
-        <div class="w-16 h-16 rounded-2xl bg-verde-100 text-verde-700 flex items-center justify-center">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M9 9h.01M15 9h.01M9 15c1 1 5 1 6 0"/></svg>
-        </div>
-      </div>
-      <div class="lg:col-span-3">
         <span class="eyebrow">Estética Dental</span>
         <h2 class="font-display text-3xl text-verde-800 mt-3">Restaurações Estéticas em Resina</h2>
         <p class="mt-4 text-tinta/70 leading-relaxed">Resinas de alta tecnologia no tom exato dos seus dentes, devolvendo estética e função mastigatória com o mínimo de desgaste da estrutura dental saudável.</p>
         <a href="https://wa.me/5518996001588?text=Ol%C3%A1%20Dra.%20Mariana!%20Tenho%20interesse%20em%20Restaura%C3%A7%C3%A3o%20Est%C3%A9tica%20em%20Resina." target="_blank" rel="noopener" class="btn-primary mt-7">Agendar Avaliação</a>
+      </div>
+      <div class="lg:col-span-3">
+        <div class="compare shadow-soft" id="compare-restauracoes" style="--pos:50%">
+          <img src="assets/casos/antes-estetica.jpg" alt="Antes da restauração estética em resina &ndash; paciente real da Dra. Mariana Furuse, Araçatuba SP" loading="lazy" width="1400" height="1050" />
+          <img class="compare-after" src="assets/casos/depois-estetica.jpg" alt="Depois da restauração estética em resina &ndash; paciente real da Dra. Mariana Furuse, Araçatuba SP" loading="lazy" width="1400" height="1050" />
+          <div class="compare-handle"></div>
+          <span class="absolute top-3 left-3 text-[11px] tracking-wide uppercase bg-black/40 text-white px-2 py-1 rounded-full">Antes</span>
+          <span class="absolute top-3 right-3 text-[11px] tracking-wide uppercase bg-black/40 text-white px-2 py-1 rounded-full">Depois</span>
+          <input class="compare-range" type="range" min="0" max="100" value="50" aria-label="Comparar antes e depois da restauração estética em resina" />
+        </div>
+        <p class="mt-3 text-xs text-tinta/55">* Foto real de paciente da clínica, cedida para fins ilustrativos. Resultados podem variar de paciente para paciente.</p>
       </div>
     </div>
   </section>
 
   <!-- ESTÉTICA / LENTES -->
   <section id="estetica-lentes" class="py-16 sm:py-20 bg-white border-t border-bege-200">
-    <div class="container-page grid lg:grid-cols-5 gap-10 items-start">
-      <div class="lg:col-span-3 order-2 lg:order-1">
-        <div class="compare shadow-soft" id="compare-estetica" style="--pos:50%">
-          <img src="assets/casos/antes-estetica.jpg" alt="Antes da estética dental / lentes de porcelana &ndash; paciente real da Dra. Mariana Furuse, Araçatuba SP" loading="lazy" width="1400" height="1050" />
-          <img class="compare-after" src="assets/casos/depois-estetica.jpg" alt="Depois da estética dental / lentes de porcelana &ndash; paciente real da Dra. Mariana Furuse, Araçatuba SP" loading="lazy" width="1400" height="1050" />
-          <div class="compare-handle"></div>
-          <span class="absolute top-3 left-3 text-[11px] tracking-wide uppercase bg-black/40 text-white px-2 py-1 rounded-full">Antes</span>
-          <span class="absolute top-3 right-3 text-[11px] tracking-wide uppercase bg-black/40 text-white px-2 py-1 rounded-full">Depois</span>
-          <input class="compare-range" type="range" min="0" max="100" value="50" aria-label="Comparar antes e depois da estética dental" />
+    <div class="container-page">
+      <div class="relative overflow-hidden rounded-3xl border border-bege-300 bg-bege-100 px-6 py-12 sm:px-14 sm:py-16">
+        <svg class="absolute -left-10 -bottom-10 w-52 h-52 text-bege-300/80 pointer-events-none select-none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.5" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="6"/></svg>
+        <svg class="absolute -right-8 -top-8 w-36 h-36 text-verde-200/60 pointer-events-none select-none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.6" aria-hidden="true"><path d="M12 2l2.4 7.2H22l-6 4.6 2.3 7.2L12 16.4 5.7 21l2.3-7.2-6-4.6h7.6z"/></svg>
+        <div class="relative max-w-2xl mx-auto text-center">
+          <span class="eyebrow">Estética Dental</span>
+          <h2 class="font-display text-3xl sm:text-4xl text-verde-800 mt-4">Estética Dental &amp; Lentes de Porcelana</h2>
+          <p class="mt-5 text-tinta/75 leading-relaxed text-lg">Harmonização do sorriso com laminados cerâmicos de altíssima durabilidade, unindo naturalidade e resistência para um resultado que respeita a anatomia de cada paciente.</p>
+          <a href="https://wa.me/5518996001588?text=Ol%C3%A1%20Dra.%20Mariana!%20Tenho%20interesse%20em%20Est%C3%A9tica%20Dental%20%2F%20Lentes%20de%20Porcelana." target="_blank" rel="noopener" class="btn-primary mt-8">Agendar Avaliação</a>
         </div>
-        <p class="mt-3 text-xs text-tinta/55">* Foto real de paciente da clínica, cedida para fins ilustrativos. Resultados podem variar de paciente para paciente.</p>
-      </div>
-
-      <div class="lg:col-span-2 order-1 lg:order-2">
-        <span class="eyebrow">Estética Dental</span>
-        <h2 class="font-display text-3xl text-verde-800 mt-3">Estética Dental &amp; Lentes de Porcelana</h2>
-        <p class="mt-4 text-tinta/70 leading-relaxed">Harmonização do sorriso com laminados cerâmicos de altíssima durabilidade, unindo naturalidade e resistência para um resultado que respeita a anatomia de cada paciente.</p>
-        <a href="https://wa.me/5518996001588?text=Ol%C3%A1%20Dra.%20Mariana!%20Tenho%20interesse%20em%20Est%C3%A9tica%20Dental%20%2F%20Lentes%20de%20Porcelana." target="_blank" rel="noopener" class="btn-primary mt-7">Agendar Avaliação</a>
       </div>
     </div>
   </section>
