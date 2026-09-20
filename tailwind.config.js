@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       screens: {
-        nav: "1200px",
+        nav: "1260px",
       },
       colors: {
         verde: {
