@@ -36,11 +36,9 @@
     faqFilterBtns.forEach(function (btn) {
       btn.addEventListener("click", function () {
         faqFilterBtns.forEach(function (b) {
-          b.classList.remove("active", "bg-verde-600", "text-white");
-          b.classList.add("bg-white", "border", "border-bege-300", "text-tinta/70");
+          b.classList.remove("is-active");
         });
-        btn.classList.add("active", "bg-verde-600", "text-white");
-        btn.classList.remove("bg-white", "border", "border-bege-300", "text-tinta/70");
+        btn.classList.add("is-active");
 
         var cat = btn.getAttribute("data-cat");
         faqItems.forEach(function (item) {
@@ -99,17 +97,17 @@
   if (compareWidget) {
     var CASES = {
       clareamento: {
-        title: "Clareamento Dental Supervisionado",
+        title: "Clareamento dental supervisionado",
         before: "assets/casos/antes-clareamento.jpg",
         after: "assets/casos/depois-clareamento.jpg"
       },
       estetica: {
-        title: "Estética Dental & Restaurações",
+        title: "Estética dental e restaurações",
         before: "assets/casos/antes-estetica.jpg",
         after: "assets/casos/depois-estetica.jpg"
       },
       esportivo: {
-        title: "Protetor Bucal Esportivo Personalizado",
+        title: "Protetor bucal esportivo personalizado",
         before: "assets/casos/antes-protetor.jpg",
         after: "assets/casos/depois-protetor.jpg"
       }
@@ -122,11 +120,9 @@
     tabs.forEach(function (tab) {
       tab.addEventListener("click", function () {
         tabs.forEach(function (t) {
-          t.classList.remove("bg-verde-600", "text-white", "border-verde-600");
-          t.classList.add("bg-white", "text-tinta/70", "border-bege-300");
+          t.classList.remove("is-active");
         });
-        tab.classList.add("bg-verde-600", "text-white", "border-verde-600");
-        tab.classList.remove("bg-white", "text-tinta/70", "border-bege-300");
+        tab.classList.add("is-active");
 
         var key = tab.getAttribute("data-case");
         var c = CASES[key];
@@ -143,7 +139,7 @@
   var SERVICES = [
     {
       id: "clareamento",
-      title: "Clareamento Dental Supervisionado",
+      title: "Clareamento dental supervisionado",
       desc: "Sorriso iluminado e natural com protocolos de consultório ou caseiro supervisionado, com sessão de dessensibilização a laser inclusa.",
       cat: "estetica",
       tag: "Resultado Real",
@@ -154,7 +150,7 @@
     },
     {
       id: "limpeza",
-      title: "Limpeza (Profilaxia Profunda & Prevenção)",
+      title: "Limpeza e prevenção",
       desc: "Remoção de tártaro e biofilme bacteriano para gengivas saudáveis e hálito fresco.",
       cat: "limpeza",
       tag: "Resultado Real",
@@ -165,7 +161,7 @@
     },
     {
       id: "canal",
-      title: "Endodontia (Tratamento de Canal & Urgências)",
+      title: "Tratamento de canal e urgências",
       desc: "Alívio imediato da dor e preservação do dente natural com Raio X digital na hora.",
       cat: "canal",
       tag: "Destaque",
@@ -173,21 +169,21 @@
     },
     {
       id: "restauracoes",
-      title: "Restaurações Estéticas em Resina",
+      title: "Restaurações estéticas em resina",
       desc: "Resinas de alta tecnologia no tom exato dos seus dentes para estética e mastigação.",
       cat: "estetica",
       home: false
     },
     {
       id: "estetica-lentes",
-      title: "Estética Dental & Lentes de Porcelana",
+      title: "Estética dental e lentes de porcelana",
       desc: "Harmonização do sorriso com laminados cerâmicos e restaurações de altíssima durabilidade.",
       cat: "estetica",
       home: false
     },
     {
       id: "bruxismo",
-      title: "Placa de Bruxismo (Placa Oclusal)",
+      title: "Placa de bruxismo (placa oclusal)",
       desc: "Proteção contra o desgaste dos dentes e alívio de dores na articulação (DTM), feita sob medida.",
       cat: "bruxismo",
       tag: "Resultado Real",
@@ -198,7 +194,7 @@
     },
     {
       id: "protetor",
-      title: "Protetor Bucal Esportivo Personalizado",
+      title: "Protetor bucal esportivo personalizado",
       desc: "Proteção de alto nível sob medida para praticantes de esportes e atletas, com identidade visual e cores personalizadas.",
       cat: "esportivo",
       tag: "Trabalhos Reais",
@@ -224,21 +220,16 @@
         return s.home && (filter === "todos" || s.cat === filter);
       }).forEach(function (s) {
         var el = document.createElement("article");
-        var thumbHtml;
-        if (s.thumb) {
-          el.className = "flex items-start gap-4 bg-white rounded-2xl border border-bege-200 p-5 hover:border-verde-300 transition-colors";
-          thumbHtml = '<img src="' + s.thumb + '" alt="' + s.title + ' &ndash; Dra. Mariana Furuse, Araçatuba SP" loading="lazy" width="56" height="56" class="w-14 h-14 rounded-xl object-cover shrink-0" />';
-        } else {
-          el.className = "flex items-start gap-4 bg-verde-50/60 rounded-2xl border border-verde-100 p-5 hover:border-verde-300 transition-colors";
-          thumbHtml = '';
-        }
+        el.className = "flex items-start gap-5 py-6 border-b border-verde/20";
+        var thumbHtml = s.thumb
+          ? '<img src="' + s.thumb + '" alt="' + s.title + ' &ndash; Dra. Mariana Furuse, Araçatuba SP" loading="lazy" width="72" height="72" class="w-[72px] h-[72px] object-cover shrink-0" />'
+          : '';
         el.innerHTML =
           thumbHtml +
           '<div class="flex-1">' +
-            (s.tag ? '<span class="text-[10px] uppercase tracking-wide text-verde-600 font-semibold">' + s.tag + '</span>' : '') +
-            '<h3 class="font-display text-base text-verde-800 mt-0.5">' + s.title + '</h3>' +
-            '<p class="text-sm text-tinta/65 mt-1 leading-relaxed">' + s.desc + '</p>' +
-            '<a href="servicos.html#' + s.id + '" class="inline-flex items-center gap-1 mt-2 text-sm text-verde-600 hover:text-verde-800 font-medium">Saiba mais <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>' +
+            '<h3 class="font-display text-xl leading-snug text-verde-800">' + s.title + '</h3>' +
+            '<p class="text-sm text-tinta/70 mt-2 leading-relaxed">' + s.desc + '</p>' +
+            '<a href="servicos.html#' + s.id + '" class="inline-block mt-3 text-[11px] uppercase tracking-[0.2em] text-verde hover:text-verde-800">Saiba mais</a>' +
           '</div>';
         serviceList.appendChild(el);
       });
@@ -249,11 +240,9 @@
     filterBtns.forEach(function (btn) {
       btn.addEventListener("click", function () {
         filterBtns.forEach(function (b) {
-          b.classList.remove("active", "bg-verde-600", "text-white");
-          b.classList.add("bg-white", "border", "border-bege-300", "text-tinta/70");
+          b.classList.remove("is-active");
         });
-        btn.classList.add("active", "bg-verde-600", "text-white");
-        btn.classList.remove("bg-white", "border", "border-bege-300", "text-tinta/70");
+        btn.classList.add("is-active");
         renderServices(btn.getAttribute("data-filter"));
       });
     });

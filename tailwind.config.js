@@ -1,54 +1,54 @@
 /** @type {import('tailwindcss').Config} */
+// Paleta e tipografia seguem o manual de identidade visual da Dra. Mariana Furuse:
+//   Verde  #66857b  (primária)
+//   Bege   #e4ded0
+//   Areia  #b9aa8d
+//   Primária: Antigua  → fallback web: Jost (light)
+//   Secundária: Acumin Variable Concept → fallback web: Archivo
 module.exports = {
-  content: ["./*.html", "./src/**/*.{html,js}"],
+  content: ["./*.html", "./assets/js/**/*.js", "./src/**/*.{html,js}"],
   theme: {
     extend: {
       screens: {
-        nav: "1260px",
+        nav: "1100px",
       },
       colors: {
         verde: {
           DEFAULT: "#66857b",
-          50: "#f3f6f5",
-          100: "#e2eae7",
-          200: "#c5d5cf",
-          300: "#a0bab0",
-          400: "#7a9c8f",
+          50: "#f1f4f2",
+          100: "#dfe7e3",
+          200: "#c2d1cb",
+          300: "#9fb5ad",
+          400: "#809d93",
           500: "#66857b",
-          600: "#526c63",
-          700: "#43574f",
-          800: "#374642",
-          900: "#2f3b38",
-          950: "#1a2321",
+          600: "#57736a",
+          700: "#4a6259",
+          800: "#3c4f48",
+          900: "#2f3e39",
         },
         bege: {
           DEFAULT: "#e4ded0",
-          50: "#fbfaf7",
-          100: "#f6f3ed",
+          50: "#f6f4ee",
+          100: "#eeeae1",
           200: "#e4ded0",
-          300: "#d5cbb5",
-          400: "#c2b294",
-          500: "#b9aa8d",
-          600: "#a08d6e",
-          700: "#82735a",
-          800: "#6b5f4c",
-          900: "#584e40",
+          300: "#d3cab5",
         },
-        tinta: "#3a3733",
+        areia: {
+          DEFAULT: "#b9aa8d",
+          600: "#8f8166",
+          700: "#6f644f",
+        },
+        tinta: "#2f3e39",
       },
       fontFamily: {
-        display: ["Fraunces", "ui-serif", "Georgia", "serif"],
-        sans: ["Inter", "ui-sans-serif", "system-ui", "sans-serif"],
+        display: ["Antigua", "Jost", "ui-sans-serif", "system-ui", "sans-serif"],
+        sans: ["acumin-variable", "Acumin Variable Concept", "Archivo", "ui-sans-serif", "system-ui", "sans-serif"],
       },
       maxWidth: {
-        content: "1280px",
+        content: "1240px",
       },
-      boxShadow: {
-        soft: "0 20px 45px -20px rgba(58, 55, 51, 0.25)",
-        card: "0 10px 30px -12px rgba(58, 55, 51, 0.18)",
-      },
-      borderRadius: {
-        "4xl": "2rem",
+      letterSpacing: {
+        label: "0.28em",
       },
     },
   },

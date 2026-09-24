@@ -37,7 +37,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500&family=Jost:wght@200;300;400&display=swap" rel="stylesheet" />
 
 <link rel="stylesheet" href="assets/css/styles.css" />
 
@@ -69,7 +69,7 @@
   "openingHoursSpecification": [
     {
       "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
       "description": "Atendimento com agendamento prévio"
     }
   ],
@@ -143,65 +143,42 @@
 </head>
 <body class="bg-bege-50">
 
-<!-- Topbar -->
-<div class="hidden sm:block bg-verde-800 text-bege-100 text-xs">
-  <div class="container-page flex items-center justify-between py-2 gap-4">
-    <div class="flex items-center gap-5">
-      <span class="tracking-wide">CROSP 176030</span>
-      <a href="https://maps.google.com/?q=R.+Fernando+Costa,+223+-+Bairro+das+Bandeiras,+Ara%C3%A7atuba+-+SP" target="_blank" rel="noopener" class="hover:text-white transition-colors">
-        R. Fernando Costa, 223 - Bairro das Bandeiras, Araçatuba - SP
-      </a>
-    </div>
-    <div class="flex items-center gap-5">
-      <span>Segunda a Sexta: Com agendamento prévio</span>
-      <a href="https://instagram.com/marianafuruse" target="_blank" rel="noopener" class="hover:text-white transition-colors">@marianafuruse</a>
-    </div>
-  </div>
-</div>
-
 <!-- Header -->
-<header class="sticky top-0 z-50 bg-bege-50/90 backdrop-blur border-b border-bege-200">
-  <div class="container-page flex items-center justify-between gap-4 py-3">
-    <a href="#" class="flex items-center gap-3 shrink-0">
-      <img src="assets/logos/symbol-green-on-transparent.png" alt="Símbolo Dra. Mariana Furuse" class="h-9 w-auto" />
-      <span class="leading-tight">
-        <span class="block font-display text-lg text-verde-800">Dra. Mariana Furuse</span>
-        <span class="block text-[11px] tracking-[0.15em] uppercase text-tinta/60">Odontologia &bull; FOA UNESP</span>
+<header class="sticky top-0 z-50 bg-bege-50/95 backdrop-blur border-b border-verde/15">
+  <div class="container-page flex items-center justify-between gap-6 h-[72px]">
+    <a href="#" class="flex items-center gap-3.5 shrink-0" aria-label="Dra. Mariana Furuse — Cirurgiã-Dentista">
+      <img src="assets/logos/symbol-green-on-transparent.png" alt="" class="h-7 w-auto" />
+      <span class="leading-none">
+        <span class="block font-display font-light text-[1.35rem] text-verde-800 tracking-tight">Dra. Mariana Furuse</span>
+        <span class="block mt-1 text-[9.5px] tracking-label uppercase text-verde">Cirurgiã-Dentista</span>
       </span>
     </a>
 
-    <nav class="hidden nav:flex items-center gap-3.5 shrink-0">
-      <a href="#primeira-consulta" class="nav-link whitespace-nowrap">Primeira Consulta</a>
-      <a href="#casos-clinicos" class="nav-link whitespace-nowrap">Serviços &amp; Casos</a>
-      <a href="#como-funciona" class="nav-link whitespace-nowrap">Como Funciona</a>
-      <a href="#depoimentos" class="nav-link whitespace-nowrap">Depoimentos</a>
-      <a href="#sobre" class="nav-link whitespace-nowrap">Sobre a Dra.</a>
-      <a href="#faq" class="nav-link whitespace-nowrap">FAQ</a>
-      <a href="#contato" class="nav-link whitespace-nowrap">Contato</a>
+    <nav class="hidden nav:flex items-center gap-7">
+      <a href="#primeira-consulta" class="nav-link">Primeira consulta</a>
+      <a href="#tratamentos" class="nav-link">Tratamentos</a>
+      <a href="#sobre" class="nav-link">Sobre</a>
+      <a href="#depoimentos" class="nav-link">Depoimentos</a>
+      <a href="#faq" class="nav-link">Dúvidas</a>
+      <a href="#contato" class="nav-link">Contato</a>
     </nav>
 
-    <div class="hidden nav:flex items-center gap-2.5 shrink-0">
-      <a href="#contato" class="btn-secondary !px-4 !py-2.5 whitespace-nowrap">Agendar</a>
-      <a href="https://wa.me/5518996001588?text=Ol%C3%A1%20Dra.%20Mariana!%20Gostaria%20de%20agendar%20minha%20Primeira%20Consulta%20na%20cl%C3%ADnica." target="_blank" rel="noopener" class="btn-primary !px-4 !py-2.5 whitespace-nowrap">
-        WhatsApp
-      </a>
-    </div>
+    <a href="https://wa.me/5518996001588?text=Ol%C3%A1%20Dra.%20Mariana!%20Gostaria%20de%20agendar%20minha%20Primeira%20Consulta%20na%20cl%C3%ADnica." target="_blank" rel="noopener" class="hidden nav:inline-flex btn-primary !px-5 !py-3">Agendar</a>
 
-    <button id="menu-toggle" class="nav:hidden p-2 text-verde-800" aria-label="Abrir menu de navegação">
-      <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+    <button id="menu-toggle" class="nav:hidden p-2 -mr-2 text-verde-800" aria-label="Abrir menu de navegação">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><line x1="3" y1="8" x2="21" y2="8"/><line x1="3" y1="16" x2="21" y2="16"/></svg>
     </button>
   </div>
 
-  <div id="mobile-menu" data-open="false" class="nav:hidden border-t border-bege-200 bg-bege-50">
-    <div class="container-page py-4 flex flex-col gap-1">
-      <a href="#primeira-consulta" class="py-2.5 nav-link">Primeira Consulta</a>
-      <a href="#casos-clinicos" class="py-2.5 nav-link">Serviços &amp; Casos</a>
-      <a href="#como-funciona" class="py-2.5 nav-link">Como Funciona</a>
-      <a href="#depoimentos" class="py-2.5 nav-link">Depoimentos</a>
-      <a href="#sobre" class="py-2.5 nav-link">Sobre a Dra.</a>
-      <a href="#faq" class="py-2.5 nav-link">FAQ</a>
-      <a href="#contato" class="py-2.5 nav-link">Contato</a>
-      <a href="https://wa.me/5518996001588" target="_blank" rel="noopener" class="btn-primary mt-3 w-full">Agendar pelo WhatsApp</a>
+  <div id="mobile-menu" data-open="false" class="nav:hidden border-t border-verde/15 bg-bege-50">
+    <div class="container-page py-5 flex flex-col">
+      <a href="#primeira-consulta" class="py-3 nav-link border-b border-verde/10">Primeira consulta</a>
+      <a href="#tratamentos" class="py-3 nav-link border-b border-verde/10">Tratamentos</a>
+      <a href="#sobre" class="py-3 nav-link border-b border-verde/10">Sobre</a>
+      <a href="#depoimentos" class="py-3 nav-link border-b border-verde/10">Depoimentos</a>
+      <a href="#faq" class="py-3 nav-link border-b border-verde/10">Dúvidas</a>
+      <a href="#contato" class="py-3 nav-link">Contato</a>
+      <a href="https://wa.me/5518996001588?text=Ol%C3%A1%20Dra.%20Mariana!%20Gostaria%20de%20agendar%20minha%20Primeira%20Consulta%20na%20cl%C3%ADnica." target="_blank" rel="noopener" class="btn-primary mt-4 w-full">Agendar pelo WhatsApp</a>
     </div>
   </div>
 </header>
@@ -209,603 +186,437 @@
 <main>
 
   <!-- HERO -->
-  <section class="relative overflow-hidden bg-gradient-to-b from-bege-100 to-bege-50">
-    <div class="container-page grid lg:grid-cols-2 gap-12 items-center py-14 sm:py-20 lg:py-24">
-      <div>
-        <span class="eyebrow">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l2.4 7.2H22l-6 4.6 2.3 7.2L12 16.4 5.7 21l2.3-7.2-6-4.6h7.6z"/></svg>
-          Odontologia de Excelência &bull; Araçatuba &ndash; SP
-        </span>
-
-        <h1 class="mt-5 font-display text-5xl sm:text-6xl lg:text-[4.2rem] leading-[1.02] text-tinta">
-          Dra. Mariana<br />
-          <span class="text-verde-600">Furuse</span>
+  <section class="relative bg-verde text-bege-200 overflow-hidden">
+    <div class="container-page grid lg:grid-cols-12 gap-12 lg:gap-8 items-end pt-14 sm:pt-20 lg:pt-24">
+      <div class="lg:col-span-7 pb-14 lg:pb-24">
+        <h1>
+          <span class="sr-only">Dra. Mariana Furuse — Cirurgiã-Dentista em Araçatuba, SP. CROSP 176030</span>
+          <img src="assets/logos/logo-cream-on-transparent.png" alt="" width="4000" height="1392" fetchpriority="high" class="w-full max-w-[560px] h-auto" />
         </h1>
 
-        <p class="mt-4 text-sm tracking-[0.12em] uppercase text-tinta/60">
-          Cirurgiã-Dentista &bull; FOA UNESP &bull; CROSP 176030
+        <p class="mt-12 sm:mt-14 max-w-lg font-display font-light text-[1.6rem] sm:text-[2rem] leading-[1.2] text-bege-50">
+          Odontologia com calma, escuta e atenção aos detalhes, pensando na saúde e na longevidade do seu sorriso.
         </p>
 
-        <p class="mt-6 text-lg sm:text-xl text-tinta/85 leading-relaxed">
-          Atendimento odontológico focado na sua <strong class="text-verde-700">saúde</strong>, <strong class="text-verde-700">prevenção</strong> e <strong class="text-verde-700">longevidade do sorriso</strong>.
-        </p>
-
-        <p class="mt-4 text-base sm:text-lg text-tinta/75 leading-relaxed">
-          Atenção aos detalhes, acolhimento e escuta atenta em <span class="highlight">Araçatuba &ndash; SP</span>. Especialista em clínico geral, canal (urgências), limpeza, clareamento, placas de bruxismo e protetores esportivos sob medida.
-        </p>
-
-        <div class="mt-7 flex items-start gap-3 rounded-2xl bg-white border border-bege-200 px-5 py-4 shadow-card">
-          <svg class="text-verde-600 shrink-0 mt-0.5" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l2.5 2.5L16 9"/></svg>
-          <p class="text-sm sm:text-base text-tinta/85"><strong class="text-verde-800">Primeira Consulta com valor R$125 abatido</strong> ao realizar qualquer tratamento na clínica em até 15 dias!</p>
-        </div>
-
-        <div class="mt-8 flex flex-wrap gap-4">
-          <a href="https://wa.me/5518996001588?text=Ol%C3%A1%20Dra.%20Mariana!%20Gostaria%20de%20agendar%20minha%20Primeira%20Consulta%20na%20cl%C3%ADnica." target="_blank" rel="noopener" class="btn-primary">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.5 0-9.96 4.46-9.96 9.96 0 1.76.46 3.44 1.34 4.94L2 22l5.24-1.37a9.9 9.9 0 004.8 1.23h.01c5.5 0 9.96-4.46 9.96-9.96S17.54 2 12.04 2z" opacity="0"/><path d="M17.47 14.38c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.47-.89-.79-1.48-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.14-.14.3-.35.45-.53.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.6-.91-2.2-.24-.58-.49-.5-.67-.5h-.57c-.2 0-.52.07-.79.37s-1.04 1.02-1.04 2.48 1.07 2.87 1.22 3.07c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.13-.27-.2-.57-.35z"/></svg>
-            Agendar pelo WhatsApp
-          </a>
-          <a href="#primeira-consulta" class="btn-secondary">Como Funciona a Consulta</a>
-        </div>
-
-        <div class="mt-10 flex flex-wrap items-center gap-x-8 gap-y-4 text-tinta/70 text-sm">
-          <div class="flex items-center gap-2"><span class="font-display text-verde-700 text-lg">FOA UNESP</span> <span>Faculdade de Odontologia</span></div>
-          <div class="flex items-center gap-2"><span class="font-display text-verde-700 text-lg">CROSP</span> <span>176030</span></div>
+        <div class="mt-10 flex flex-wrap items-center gap-x-8 gap-y-5">
+          <a href="https://wa.me/5518996001588?text=Ol%C3%A1%20Dra.%20Mariana!%20Gostaria%20de%20agendar%20minha%20Primeira%20Consulta%20na%20cl%C3%ADnica." target="_blank" rel="noopener" class="btn-light">Agendar pelo WhatsApp</a>
+          <a href="#primeira-consulta" class="inline-flex items-center gap-2 text-sm text-bege-200 border-b border-bege-200/40 pb-0.5 hover:border-bege-50 hover:text-bege-50 transition-colors">Como é a primeira consulta</a>
         </div>
       </div>
 
-      <div class="relative">
-        <div class="rounded-4xl overflow-hidden shadow-soft border border-bege-200/60">
-          <img src="assets/fotos/clinica-frente.jpg" alt="Fachada da clínica odontológica Dra. Mariana Furuse em Araçatuba - SP" width="1600" height="1067" fetchpriority="high" class="w-full h-[420px] sm:h-[520px] object-cover" />
+      <div class="lg:col-span-5 lg:pl-6">
+        <div class="arch mx-auto max-w-[380px] lg:max-w-none aspect-[3/4] lg:aspect-auto lg:h-[560px] bg-bege-200">
+          <img src="assets/fotos/dra/retrato-estudio.jpg" alt="Dra. Mariana Furuse, cirurgiã-dentista em Araçatuba - SP" width="1400" height="2100" class="w-full h-full object-cover object-[center_30%]" />
         </div>
+      </div>
+    </div>
 
-        <div class="absolute -bottom-6 -left-6 sm:-left-10 bg-white rounded-2xl shadow-soft border border-bege-200 px-5 py-4 flex items-center gap-3">
-          <div class="w-11 h-11 rounded-full bg-verde-100 flex items-center justify-center text-verde-700">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-6 9 6v11a1 1 0 01-1 1h-5v-7H9v7H4a1 1 0 01-1-1z"/></svg>
-          </div>
-          <div>
-            <p class="text-xs text-tinta/60">Consulta (Valor Abatido)</p>
-            <p class="font-display text-2xl text-verde-800">R$ 125</p>
-          </div>
-        </div>
-
-        <div class="absolute -top-5 -right-3 sm:-right-8 bg-verde-700 text-bege-50 rounded-2xl shadow-soft px-5 py-4">
-          <p class="text-xs uppercase tracking-wide text-bege-100/80">Raio X Digital</p>
-          <p class="font-display text-lg">Na Hora</p>
-          <p class="text-xs text-bege-100/80 mt-1">Atendimento de Urgências</p>
-        </div>
+    <div class="border-t border-bege-200/25">
+      <div class="container-page grid sm:grid-cols-3 text-sm">
+        <p class="py-5 sm:pr-6 border-b sm:border-b-0 sm:border-r border-bege-200/25"><span class="block text-[10px] uppercase tracking-label text-bege-200/70 mb-1.5">Primeira consulta</span>R$ 125, abatidos do tratamento feito em até 15 dias</p>
+        <p class="py-5 sm:px-6 border-b sm:border-b-0 sm:border-r border-bege-200/25"><span class="block text-[10px] uppercase tracking-label text-bege-200/70 mb-1.5">Urgências</span>Raio X digital na própria clínica</p>
+        <p class="py-5 sm:pl-6"><span class="block text-[10px] uppercase tracking-label text-bege-200/70 mb-1.5">Atendimento</span>Segunda a sábado, com horário marcado</p>
       </div>
     </div>
   </section>
 
   <!-- PRIMEIRA CONSULTA -->
-  <section id="primeira-consulta" class="py-16 sm:py-24 bg-white">
+  <section id="primeira-consulta" class="py-20 sm:py-28">
     <div class="container-page">
-      <div class="max-w-2xl mx-auto text-center">
-        <span class="eyebrow">Atendimento Inicial e Diferenciados</span>
-        <h2 class="section-title mt-4">Como funciona a sua <span class="text-verde-600">Primeira Consulta</span></h2>
-        <p class="mt-4 text-tinta/70 text-lg">Um atendimento calmo, atencioso e transparente para entender suas necessidades e cuidar da sua saúde bucal com máxima dedicação.</p>
-      </div>
-
-      <div class="mt-12 grid lg:grid-cols-5 gap-8 items-start">
-        <div class="lg:col-span-3 card p-7 sm:p-10">
-          <h3 class="font-display text-2xl text-verde-800">Exame Completo e Individualizado</h3>
-          <p class="mt-4 text-tinta/75 leading-relaxed">
-            &ldquo;Na primeira consulta, é realizado um exame clínico completo e individualizado da sua saúde bucal. É feita a avaliação criteriosa da sua queixa principal, identificação das causas e elaboração de um plano de tratamento personalizado com clareza e transparência. Exames anteriores podem ser apresentados para análise diagnóstica. Havendo urgência odontológica, a clínica dispõe de tecnologia de Raio X digital instantâneo. Para aprimoramento da higiene diária, o paciente também pode trazer sua escova de dentes para orientações personalizadas de escovação.&rdquo;
+      <div class="grid lg:grid-cols-12 gap-12">
+        <div class="lg:col-span-5">
+          <p class="label label-line">Primeira consulta</p>
+          <h2 class="section-title mt-6">Como funciona a sua primeira consulta</h2>
+        </div>
+        <div class="lg:col-span-7 lg:pt-12">
+          <p class="text-lg leading-relaxed text-tinta/80">
+            Na primeira consulta, é realizado um exame clínico completo e individualizado da sua saúde bucal. É feita a avaliação criteriosa da sua queixa principal, identificação das causas e elaboração de um plano de tratamento personalizado com clareza e transparência.
+          </p>
+          <p class="mt-5 leading-relaxed text-tinta/70">
+            Exames anteriores podem ser apresentados para análise diagnóstica. Havendo urgência odontológica, a clínica dispõe de tecnologia de Raio X digital instantâneo. Para aprimoramento da higiene diária, o paciente também pode trazer sua escova de dentes para orientações personalizadas de escovação.
           </p>
 
-          <ul class="mt-7 space-y-3">
-            <li class="flex items-center gap-3 text-tinta/80"><span class="w-6 h-6 rounded-full bg-verde-100 text-verde-700 flex items-center justify-center shrink-0"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span>Traga seus exames prévios se possuir</li>
-            <li class="flex items-center gap-3 text-tinta/80"><span class="w-6 h-6 rounded-full bg-verde-100 text-verde-700 flex items-center justify-center shrink-0"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span>Orientações com sua própria escova de dentes</li>
-            <li class="flex items-center gap-3 text-tinta/80"><span class="w-6 h-6 rounded-full bg-verde-100 text-verde-700 flex items-center justify-center shrink-0"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span>Sensor de Raio X Digital na própria clínica</li>
-          </ul>
-
-          <a href="https://wa.me/5518996001588?text=Ol%C3%A1%20Dra.%20Mariana!%20Gostaria%20de%20agendar%20minha%20Primeira%20Consulta." target="_blank" rel="noopener" class="btn-primary mt-8">Agendar Consulta</a>
-        </div>
-
-        <div class="lg:col-span-2 bg-verde-700 text-bege-50 rounded-3xl p-7 sm:p-10 flex flex-col justify-between shadow-card">
-          <div>
-            <p class="text-xs uppercase tracking-[0.15em] text-bege-100/70">Investimento da Consulta</p>
-            <p class="font-display text-5xl mt-2">R$ 125,00</p>
-            <p class="mt-1 text-bege-100/90 font-medium">100% Abatido</p>
-            <p class="mt-4 text-sm text-bege-100/75 leading-relaxed">Este valor é 100% abatido ao realizar qualquer tratamento na clínica (válido por 15 dias após a consulta).</p>
+          <div class="mt-12 grid sm:grid-cols-2 border-t border-verde/20">
+            <div class="py-7 sm:pr-8 border-b sm:border-b-0 sm:border-r border-verde/20">
+              <p class="label">Valor da consulta</p>
+              <p class="mt-3 font-display font-light text-5xl text-verde-800">R$ 125</p>
+              <p class="mt-3 text-sm leading-relaxed text-tinta/70">100% abatido ao realizar qualquer tratamento na clínica em até 15 dias após a consulta.</p>
+            </div>
+            <ul class="py-7 sm:pl-8 space-y-3 text-sm text-tinta/80">
+              <li class="flex gap-3"><span class="text-areia">—</span>Traga seus exames prévios, se tiver</li>
+              <li class="flex gap-3"><span class="text-areia">—</span>Traga sua escova de dentes para orientações de escovação</li>
+              <li class="flex gap-3"><span class="text-areia">—</span>Raio X digital na própria clínica</li>
+            </ul>
           </div>
-          <a href="https://maps.google.com/?q=R.+Fernando+Costa,+223+-+Bairro+das+Bandeiras,+Ara%C3%A7atuba+-+SP" target="_blank" rel="noopener" class="mt-6 flex items-center gap-2 text-sm text-bege-100/85 hover:text-white transition-colors">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            R. Fernando Costa, 223 - Bairro das Bandeiras, Araçatuba - SP
-          </a>
+
+          <a href="https://wa.me/5518996001588?text=Ol%C3%A1%20Dra.%20Mariana!%20Gostaria%20de%20agendar%20minha%20Primeira%20Consulta%20na%20cl%C3%ADnica." target="_blank" rel="noopener" class="btn-primary mt-4">Agendar consulta</a>
         </div>
       </div>
 
       <!-- Tecnologia -->
-      <div class="mt-20 text-center max-w-2xl mx-auto">
-        <h3 class="section-title !text-3xl">Tecnologia e Conforto para Você</h3>
-      </div>
-      <div class="mt-10 grid sm:grid-cols-3 gap-6">
-        <div class="card p-7 text-center">
-          <div class="w-14 h-14 mx-auto rounded-2xl bg-verde-100 text-verde-700 flex items-center justify-center">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M7 21h10M12 18v3"/></svg>
-          </div>
-          <h4 class="mt-5 font-display text-xl text-verde-800">Sensor de Raio X Digital</h4>
-          <p class="mt-2 text-sm text-tinta/70 leading-relaxed">Imagens radiográficas instantâneas no computador, sem tempo de espera para um diagnóstico rápido e seguro.</p>
+      <div class="mt-24 sm:mt-32 grid lg:grid-cols-12 gap-12 items-center">
+        <div class="lg:col-span-6 order-2 lg:order-1">
+          <img src="assets/fotos/clinica-consultorio.jpg" alt="Consultório da clínica da Dra. Mariana Furuse em Araçatuba - SP" width="1600" height="900" loading="lazy" class="w-full aspect-[4/3] object-cover" />
         </div>
-        <div class="card p-7 text-center">
-          <div class="w-14 h-14 mx-auto rounded-2xl bg-verde-100 text-verde-700 flex items-center justify-center">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 12a8 8 0 1116 0 8 8 0 01-16 0z"/><path d="M12 8v4l3 2"/></svg>
-          </div>
-          <h4 class="mt-5 font-display text-xl text-verde-800">Escaneamento Digital</h4>
-          <p class="mt-2 text-sm text-tinta/70 leading-relaxed">Mapeamento tridimensional da boca com máxima precisão, sem a necessidade das moldagens desconfortáveis tradicionais.</p>
-        </div>
-        <div class="card p-7 text-center">
-          <div class="w-14 h-14 mx-auto rounded-2xl bg-verde-100 text-verde-700 flex items-center justify-center">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 18v-5a3 3 0 013-3h10a3 3 0 013 3v5M4 18h16M6 10V7a2 2 0 012-2h8a2 2 0 012 2v3"/></svg>
-          </div>
-          <h4 class="mt-5 font-display text-xl text-verde-800">Cadeira com Esteira de Massagem</h4>
-          <p class="mt-2 text-sm text-tinta/70 leading-relaxed">Experiência de atendimento relaxante com esteira de massagem integrada na cadeira odontológica.</p>
+        <div class="lg:col-span-6 order-1 lg:order-2 lg:pl-8">
+          <p class="label label-line">Na clínica</p>
+          <h3 class="section-title !text-4xl sm:!text-[2.6rem] mt-6">Tecnologia e conforto</h3>
+          <dl class="mt-10 divide-y divide-verde/20 border-y border-verde/20">
+            <div class="py-6 grid sm:grid-cols-[180px_1fr] gap-2 sm:gap-6">
+              <dt class="font-display text-xl text-verde-800">Raio X digital</dt>
+              <dd class="text-sm leading-relaxed text-tinta/70">Imagens radiográficas instantâneas no computador, sem tempo de espera, para um diagnóstico rápido e seguro.</dd>
+            </div>
+            <div class="py-6 grid sm:grid-cols-[180px_1fr] gap-2 sm:gap-6">
+              <dt class="font-display text-xl text-verde-800">Escaneamento digital</dt>
+              <dd class="text-sm leading-relaxed text-tinta/70">Mapeamento tridimensional da boca com precisão, sem as moldagens desconfortáveis tradicionais.</dd>
+            </div>
+            <div class="py-6 grid sm:grid-cols-[180px_1fr] gap-2 sm:gap-6">
+              <dt class="font-display text-xl text-verde-800">Cadeira com massagem</dt>
+              <dd class="text-sm leading-relaxed text-tinta/70">Esteira de massagem integrada à cadeira odontológica, para um atendimento mais relaxante.</dd>
+            </div>
+          </dl>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CASOS CLÍNICOS -->
-  <section id="casos-clinicos" class="py-16 sm:py-24 bg-bege-100">
+  <!-- TRATAMENTOS & CASOS -->
+  <section id="tratamentos" class="py-20 sm:py-28 bg-bege-200">
     <div class="container-page">
-      <div class="max-w-2xl mx-auto text-center">
-        <span class="eyebrow">Tratamentos &amp; Resultados Clínicos</span>
-        <h2 class="section-title mt-4">Casos Clínicos, Serviços e <span class="text-verde-600">Resultados</span></h2>
-        <p class="mt-4 text-tinta/70 text-lg">Conheça os procedimentos oferecidos pela Dra. Mariana Furuse em Araçatuba &ndash; SP. Arraste o divisor interativo abaixo para comparar o Antes e Depois real dos tratamentos.</p>
+      <div class="grid lg:grid-cols-12 gap-8 items-end">
+        <div class="lg:col-span-6">
+          <p class="label label-line">Tratamentos e casos</p>
+          <h2 class="section-title mt-6">Resultados de pacientes da clínica</h2>
+        </div>
+        <p class="lg:col-span-5 lg:col-start-8 text-tinta/70 leading-relaxed">Arraste o divisor sobre a foto para comparar o antes e o depois. Fotos reais de pacientes da clínica, cedidas para fins ilustrativos.</p>
       </div>
 
-      <!-- Comparador interativo -->
-      <div class="mt-12 grid lg:grid-cols-5 gap-8 items-start">
-        <div class="lg:col-span-3">
-          <p class="eyebrow !bg-transparent !px-0 !text-verde-600">Comparador Interativo Antes &amp; Depois</p>
-          <h3 id="compare-title" class="font-display text-2xl sm:text-3xl text-verde-800 mt-2 mb-5">Clareamento Dental Supervisionado</h3>
-
-          <div class="flex gap-2 mb-5" id="compare-tabs">
-            <button data-case="clareamento" class="compare-tab px-4 py-2 rounded-full text-sm font-medium bg-verde-600 text-white border border-verde-600">Clareamento</button>
-            <button data-case="estetica" class="compare-tab px-4 py-2 rounded-full text-sm font-medium bg-white text-tinta/70 border border-bege-300 hover:bg-verde-50">Estética &amp; Restaurações</button>
-            <button data-case="esportivo" class="compare-tab px-4 py-2 rounded-full text-sm font-medium bg-white text-tinta/70 border border-bege-300 hover:bg-verde-50">Protetor Esportivo</button>
+      <div class="mt-14 grid lg:grid-cols-12 gap-12">
+        <div class="lg:col-span-7">
+          <div class="flex flex-wrap gap-x-7 gap-y-3 mb-6" id="compare-tabs">
+            <button data-case="clareamento" class="compare-tab tab is-active">Clareamento</button>
+            <button data-case="estetica" class="compare-tab tab">Estética e restaurações</button>
+            <button data-case="esportivo" class="compare-tab tab">Protetor esportivo</button>
           </div>
 
-          <div class="compare shadow-soft" id="compare-widget" style="--pos:50%">
+          <div class="compare" id="compare-widget" style="--pos:50%">
             <img id="compare-before" src="assets/casos/antes-clareamento.jpg" alt="Antes do clareamento dental &ndash; paciente da Dra. Mariana Furuse em Araçatuba" />
             <img id="compare-after" class="compare-after" src="assets/casos/depois-clareamento.jpg" alt="Depois do clareamento dental &ndash; paciente da Dra. Mariana Furuse em Araçatuba" />
             <div class="compare-handle"></div>
-            <span class="absolute top-3 left-3 text-[11px] tracking-wide uppercase bg-black/40 text-white px-2 py-1 rounded-full">Antes</span>
-            <span class="absolute top-3 right-3 text-[11px] tracking-wide uppercase bg-black/40 text-white px-2 py-1 rounded-full">Depois</span>
+            <span class="compare-tag left-3.5">Antes</span>
+            <span class="compare-tag right-3.5">Depois</span>
             <input id="compare-range" class="compare-range" type="range" min="0" max="100" value="50" aria-label="Controle deslizante para comparar Antes e Depois" />
           </div>
-
-          <p class="mt-3 text-xs text-tinta/55">* Arraste a linha vertical branca no centro da imagem para comparar os resultados do tratamento. Fotos reais de pacientes da clínica, cedidas para fins ilustrativos. Resultados podem variar de paciente para paciente.</p>
-
-          <div class="mt-6 flex flex-wrap gap-4">
-            <a href="https://wa.me/5518996001588" target="_blank" rel="noopener" class="btn-primary">Agendar este Procedimento</a>
-            <a href="servicos.html" class="btn-secondary">Ver Todos os Serviços</a>
+          <div class="mt-4 flex flex-wrap items-baseline justify-between gap-3">
+            <p id="compare-title" class="font-display text-2xl text-verde-800">Clareamento dental supervisionado</p>
+            <p class="text-xs text-tinta/55">Resultados podem variar de paciente para paciente.</p>
           </div>
         </div>
 
-        <div class="lg:col-span-2">
-          <div class="flex flex-wrap gap-2" id="service-filters">
-            <button data-filter="todos" class="filter-btn active px-4 py-2 rounded-full text-sm font-medium bg-verde-600 text-white">Todos os Serviços</button>
-            <button data-filter="estetica" class="filter-btn px-4 py-2 rounded-full text-sm font-medium bg-white border border-bege-300 text-tinta/70 hover:bg-verde-50">Estética Dental</button>
-            <button data-filter="canal" class="filter-btn px-4 py-2 rounded-full text-sm font-medium bg-white border border-bege-300 text-tinta/70 hover:bg-verde-50">Canal &amp; Urgências</button>
-            <button data-filter="bruxismo" class="filter-btn px-4 py-2 rounded-full text-sm font-medium bg-white border border-bege-300 text-tinta/70 hover:bg-verde-50">Placa de Bruxismo</button>
-            <button data-filter="esportivo" class="filter-btn px-4 py-2 rounded-full text-sm font-medium bg-white border border-bege-300 text-tinta/70 hover:bg-verde-50">Protetor Esportivo</button>
+        <div class="lg:col-span-5">
+          <div class="flex flex-wrap gap-x-6 gap-y-3" id="service-filters">
+            <button data-filter="todos" class="filter-btn tab is-active">Todos</button>
+            <button data-filter="estetica" class="filter-btn tab">Estética</button>
+            <button data-filter="bruxismo" class="filter-btn tab">Bruxismo</button>
+            <button data-filter="esportivo" class="filter-btn tab">Esporte</button>
           </div>
 
-          <div class="mt-6 max-h-[560px] overflow-y-auto pr-1 space-y-4" id="service-list">
-            <!-- injected by JS from SERVICES data, static fallback below for no-JS -->
+          <div class="mt-6 border-t border-verde/25" id="service-list">
             <noscript>
-              <p class="text-sm text-tinta/60">Ative o JavaScript para ver a lista completa de serviços, ou <a href="servicos.html" class="underline text-verde-700">acesse a página de serviços</a>.</p>
+              <p class="py-5 text-sm text-tinta/60">Ative o JavaScript para ver a lista de serviços, ou <a href="servicos.html" class="underline text-verde-700">acesse a página de serviços</a>.</p>
             </noscript>
           </div>
 
-          <a href="servicos.html" class="mt-5 inline-flex items-center gap-2 text-sm font-medium text-verde-700 hover:text-verde-900">
-            Ver a lista completa de serviços (inclui Limpeza) <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-          </a>
+          <a href="servicos.html" class="text-link mt-8">Ver todos os tratamentos, incluindo limpeza e canal</a>
         </div>
-      </div>
-
-      <div class="mt-14 rounded-2xl bg-verde-50 border border-verde-100 px-6 py-5 text-center">
-        <p class="text-sm text-verde-800"><strong>* Atendimento Odontológico Ético e Personalizado</strong> &mdash; Cada ser humano possui características anatômicas únicas. Os tratamentos são planejados individualmente na consulta inicial.</p>
       </div>
     </div>
   </section>
 
-  <!-- JORNADA DO PACIENTE -->
-  <section id="como-funciona" class="py-16 sm:py-24 bg-white">
+  <!-- COMO FUNCIONA -->
+  <section id="como-funciona" class="py-20 sm:py-28">
     <div class="container-page">
-      <div class="max-w-2xl mx-auto text-center">
-        <span class="eyebrow">Jornada do Paciente</span>
-        <h2 class="section-title mt-4">Como funciona seu <span class="text-verde-600">atendimento na clínica</span></h2>
-        <p class="mt-4 text-tinta/70 text-lg">Uma trajetória clara, previsível e sem sobressaltos do primeiro contato à manutenção do seu sorriso.</p>
+      <div class="grid lg:grid-cols-12 gap-8 items-end">
+        <div class="lg:col-span-6">
+          <p class="label label-line">Passo a passo</p>
+          <h2 class="section-title mt-6">Do primeiro contato ao acompanhamento</h2>
+        </div>
       </div>
 
-      <div class="mt-14 grid md:grid-cols-5 gap-6">
-        <div class="relative">
-          <span class="font-display text-5xl text-bege-300">01</span>
-          <p class="text-xs uppercase tracking-wide text-verde-600 font-medium mt-3">Agendamento simples e rápido.</p>
-          <h3 class="font-display text-lg text-verde-800 mt-1">Contato no WhatsApp</h3>
-          <p class="text-sm text-tinta/70 mt-2 leading-relaxed">Clique no botão e fale direto com nossa equipe para agendar seu horário de acordo com sua rotina.</p>
+      <ol class="mt-16 grid md:grid-cols-5 border-t border-verde/25">
+        <li class="pt-7 pb-8 md:pr-6 border-b md:border-b-0 border-verde/15">
+          <span class="font-display font-light text-4xl text-areia">01</span>
+          <h3 class="mt-5 font-display text-xl text-verde-800">Contato pelo WhatsApp</h3>
+          <p class="mt-3 text-sm leading-relaxed text-tinta/70">Fale direto com a equipe e escolha o horário que combina com a sua rotina.</p>
+        </li>
+        <li class="pt-7 pb-8 md:px-6 border-b md:border-b-0 md:border-l border-verde/15">
+          <span class="font-display font-light text-4xl text-areia">02</span>
+          <h3 class="mt-5 font-display text-xl text-verde-800">Primeira consulta</h3>
+          <p class="mt-3 text-sm leading-relaxed text-tinta/70">Exame completo e individualizado. Analisamos sua queixa principal e seus exames prévios, e tiramos suas dúvidas.</p>
+          <p class="mt-3 text-sm leading-relaxed text-tinta/70">Solicitação de exames, se necessário.</p>
+          <p class="mt-4 text-xs text-verde-700">R$ 125, abatidos em até 15 dias</p>
+        </li>
+        <li class="pt-7 pb-8 md:px-6 border-b md:border-b-0 md:border-l border-verde/15">
+          <span class="font-display font-light text-4xl text-areia">03</span>
+          <h3 class="mt-5 font-display text-xl text-verde-800">Planejamento</h3>
+          <p class="mt-3 text-sm leading-relaxed text-tinta/70">O plano de tratamento é apresentado com calma e clareza, sem pressa e sem procedimentos desnecessários.</p>
+        </li>
+        <li class="pt-7 pb-8 md:px-6 border-b md:border-b-0 md:border-l border-verde/15">
+          <span class="font-display font-light text-4xl text-areia">04</span>
+          <h3 class="mt-5 font-display text-xl text-verde-800">Tratamento</h3>
+          <p class="mt-3 text-sm leading-relaxed text-tinta/70">Sessões na cadeira com esteira de massagem, com Raio X digital e escaneamento quando indicados.</p>
+        </li>
+        <li class="pt-7 pb-8 md:pl-6 md:border-l border-verde/15">
+          <span class="font-display font-light text-4xl text-areia">05</span>
+          <h3 class="mt-5 font-display text-xl text-verde-800">Acompanhamento</h3>
+          <p class="mt-3 text-sm leading-relaxed text-tinta/70">Orientações de higiene e retornos preventivos para manter a saúde dos dentes ao longo do tempo.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section id="sobre" class="py-20 sm:py-28 bg-bege-100">
+    <div class="container-page">
+      <div class="grid lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+        <div class="lg:col-span-5">
+          <img src="assets/fotos/dra/retrato-arco.jpg" alt="Retrato da Dra. Mariana Furuse, cirurgiã-dentista em Araçatuba - SP" width="1100" height="1650" loading="lazy" class="w-full max-w-md aspect-[3/4] object-cover" />
         </div>
-        <div class="relative">
-          <span class="font-display text-5xl text-bege-300">02</span>
-          <p class="text-xs uppercase tracking-wide text-verde-600 font-medium mt-3">Investimento de R$ 125,00 (abatido em até 15 dias).</p>
-          <h3 class="font-display text-lg text-verde-800 mt-1">Primeira Consulta Detalhada</h3>
-          <p class="text-sm text-tinta/70 mt-2 leading-relaxed">Exame completo e individualizado da sua saúde bucal. Analisamos sua queixa principal, seus exames prévios e tiramos suas dúvidas.</p>
+
+        <div class="lg:col-span-7 lg:pt-6">
+          <p class="label label-line">Sobre a Dra. Mariana</p>
+          <blockquote class="mt-8 font-display font-light text-[1.7rem] sm:text-[2.2rem] leading-[1.25] text-verde-800">
+            “Atenção aos detalhes, cuidado e acolhimento em primeiro lugar. Com profunda empatia por cada paciente, busco resolver suas necessidades através de um planejamento preciso e personalizado. Acima de tudo, só ofereço e proponho o tratamento que eu estaria disposta a realizar em mim mesma se estivesse no seu lugar.”
+          </blockquote>
+          <p class="mt-6 text-[11px] uppercase tracking-label text-verde">Dra. Mariana Furuse</p>
+
+          <p class="mt-12 leading-relaxed text-tinta/75 max-w-xl">A Dra. Mariana Furuse atua em Araçatuba&nbsp;&ndash;&nbsp;SP com uma odontologia leve, humana e voltada para a saúde e o bem-estar do paciente. O foco é oferecer o melhor planejamento possível, priorizando a prevenção, o alívio de dores, a longevidade e a estética natural do sorriso.</p>
         </div>
-        <div class="relative">
-          <span class="font-display text-5xl text-bege-300">03</span>
-          <p class="text-xs uppercase tracking-wide text-verde-600 font-medium mt-3">Sem pressa e sem procedimentos desnecessários.</p>
-          <h3 class="font-display text-lg text-verde-800 mt-1">Planejamento Claro e Transparente</h3>
-          <p class="text-sm text-tinta/70 mt-2 leading-relaxed">Apresentamos o melhor plano de tratamento com calma, clareza e soluções personalizadas para o seu bem-estar.</p>
+      </div>
+
+      <!-- Bastidores -->
+      <div class="mt-20 grid grid-cols-3 gap-3 sm:gap-5">
+        <img src="assets/fotos/dra/bastidores-consultorio.jpg" alt="Dra. Mariana Furuse anotando o planejamento do tratamento no consultório" width="900" height="1350" loading="lazy" class="w-full aspect-[3/4] object-cover" />
+        <img src="assets/fotos/dra/bastidores-instrumento.jpg" alt="Dra. Mariana Furuse com instrumental odontológico, sorrindo durante o atendimento" width="900" height="1350" loading="lazy" class="w-full aspect-[3/4] object-cover sm:mt-12" />
+        <img src="assets/fotos/dra/bastidores-tablet.jpg" alt="Dra. Mariana Furuse analisando imagens do sorriso do paciente em tablet" width="900" height="1350" loading="lazy" class="w-full aspect-[3/4] object-cover" />
+      </div>
+
+      <!-- Formação -->
+      <div class="mt-24 grid lg:grid-cols-12 gap-10">
+        <div class="lg:col-span-4">
+          <p class="label label-line">Formação</p>
+          <h3 class="section-title !text-4xl mt-6">Formação e cursos</h3>
         </div>
-        <div class="relative">
-          <span class="font-display text-5xl text-bege-300">04</span>
-          <p class="text-xs uppercase tracking-wide text-verde-600 font-medium mt-3">Experiência acolhedora e delicada.</p>
-          <h3 class="font-display text-lg text-verde-800 mt-1">Conforto e Tecnologia</h3>
-          <p class="text-sm text-tinta/70 mt-2 leading-relaxed">Sua sessão é realizada na cadeira com esteira de massagem, com tecnologia de Raio X digital instantâneo ou escaneamento.</p>
-        </div>
-        <div class="relative">
-          <span class="font-display text-5xl text-bege-300">05</span>
-          <p class="text-xs uppercase tracking-wide text-verde-600 font-medium mt-3">Suporte e cuidado contínuo.</p>
-          <h3 class="font-display text-lg text-verde-800 mt-1">Sorriso e Acompanhamento</h3>
-          <p class="text-sm text-tinta/70 mt-2 leading-relaxed">Instruções cuidadosas de higiene e programa preventivo para garantir a longevidade dos seus dentes.</p>
-        </div>
+        <ul class="lg:col-span-8 border-t border-verde/25">
+          <li class="py-6 border-b border-verde/15 grid sm:grid-cols-[1fr_1.3fr] gap-2 sm:gap-8">
+            <p class="font-display text-xl text-verde-800">Cirurgiã-Dentista</p>
+            <p class="text-sm leading-relaxed text-tinta/70">Formada pela Faculdade de Odontologia de Araçatuba (FOA UNESP).</p>
+          </li>
+          <li class="py-6 border-b border-verde/15 grid sm:grid-cols-[1fr_1.3fr] gap-2 sm:gap-8">
+            <p class="font-display text-xl text-verde-800">Atualização em Endodontia</p>
+            <p class="text-sm leading-relaxed text-tinta/70">Aperfeiçoamento em Tratamento de Canal pelo INSPE CURSOS, com a Profª Juliana Quitino Trizzi.</p>
+          </li>
+          <li class="py-6 border-b border-verde/15 grid sm:grid-cols-[1fr_1.3fr] gap-2 sm:gap-8">
+            <p class="font-display text-xl text-verde-800">DTM, Bruxismo e Placas Oclusais</p>
+            <p class="text-sm leading-relaxed text-tinta/70">Imersão em Fluxo Clínico de DTM e Placas de Bruxismo com o Profº Paulo Conti (FOB USP Bauru).</p>
+          </li>
+          <li class="py-6 border-b border-verde/15 grid sm:grid-cols-[1fr_1.3fr] gap-2 sm:gap-8">
+            <p class="font-display text-xl text-verde-800">Protetor Bucal Esportivo</p>
+            <p class="text-sm leading-relaxed text-tinta/70">Capacitação teórico-prática na confecção artesanal sob medida com o Profº Eli Namba (Sports Dental).</p>
+          </li>
+          <li class="py-6 border-b border-verde/15 grid sm:grid-cols-[1fr_1.3fr] gap-2 sm:gap-8">
+            <p class="font-display text-xl text-verde-800">Comunidade Dentista PRO</p>
+            <p class="text-sm leading-relaxed text-tinta/70">Membro da comunidade do Profº Paulo Vinícius Soares.</p>
+          </li>
+        </ul>
       </div>
     </div>
   </section>
 
   <!-- DEPOIMENTOS -->
-  <section id="depoimentos" class="py-16 sm:py-24 bg-verde-800 text-bege-50">
+  <section id="depoimentos" class="py-20 sm:py-28 bg-verde text-bege-200">
     <div class="container-page">
-      <div class="max-w-2xl mx-auto text-center">
-        <span class="eyebrow !bg-verde-700 !text-bege-100">Avaliações de Pacientes</span>
-        <h2 class="section-title !text-bege-50 mt-4">O que dizem os pacientes da <span class="text-bege-300">Dra. Mariana Furuse</span></h2>
-        <p class="mt-4 text-bege-100/75 text-lg">A satisfação, o conforto e a transformação de vidas através do sorriso são o nosso maior orgulho.</p>
+      <div class="flex flex-wrap items-end justify-between gap-6">
+        <div>
+          <p class="label label-line !text-bege-200">Depoimentos</p>
+          <h2 class="section-title !text-bege-50 mt-6">O que dizem os pacientes</h2>
+        </div>
+        <a href="https://www.google.com/maps/search/Mariana+Furuse+dentista+Ara%C3%A7atuba" target="_blank" rel="noopener" class="text-sm text-bege-200 border-b border-bege-200/40 pb-0.5 hover:text-bege-50 hover:border-bege-50 transition-colors">Nota 5,0 no Google · ver as 28 avaliações</a>
       </div>
 
-      <div class="mt-10 flex items-center justify-center gap-1 text-bege-300">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.6 6.8L12 16.9 5.8 20.3l1.6-6.8L2.2 8.9l6.9-.6z"/></svg>
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.6 6.8L12 16.9 5.8 20.3l1.6-6.8L2.2 8.9l6.9-.6z"/></svg>
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.6 6.8L12 16.9 5.8 20.3l1.6-6.8L2.2 8.9l6.9-.6z"/></svg>
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.6 6.8L12 16.9 5.8 20.3l1.6-6.8L2.2 8.9l6.9-.6z"/></svg>
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.6 6.8L12 16.9 5.8 20.3l1.6-6.8L2.2 8.9l6.9-.6z"/></svg>
-        <span class="ml-2 font-display text-lg">5,0</span>
-        <span class="text-bege-100/60 text-sm">&middot; 28 avaliações no Google</span>
-      </div>
+      <figure class="mt-16 max-w-4xl">
+        <blockquote class="font-display font-light text-[1.6rem] sm:text-[2.3rem] leading-[1.25] text-bege-50">
+          “Excelente profissional! A Mari é muito atenciosa, cuidadosa e transmite muita segurança. Atendimento impecável desde a recepção até o procedimento. Me senti super bem acolhida e o resultado ficou maravilhoso. Recomendo de olhos fechados!”
+        </blockquote>
+        <figcaption class="mt-7 text-[11px] uppercase tracking-label text-bege-200/80">Camila Vieira · Google</figcaption>
+      </figure>
 
-      <div class="mt-8 max-w-2xl mx-auto bg-verde-700/60 border border-verde-600 rounded-3xl p-8 sm:p-10 text-center">
-        <div class="flex items-center justify-center gap-1 text-bege-300">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.6 6.8L12 16.9 5.8 20.3l1.6-6.8L2.2 8.9l6.9-.6z"/></svg>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.6 6.8L12 16.9 5.8 20.3l1.6-6.8L2.2 8.9l6.9-.6z"/></svg>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.6 6.8L12 16.9 5.8 20.3l1.6-6.8L2.2 8.9l6.9-.6z"/></svg>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.6 6.8L12 16.9 5.8 20.3l1.6-6.8L2.2 8.9l6.9-.6z"/></svg>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.6 6.8L12 16.9 5.8 20.3l1.6-6.8L2.2 8.9l6.9-.6z"/></svg>
-        </div>
-
-        <p class="mt-6 text-lg sm:text-xl leading-relaxed text-bege-50/95">
-          &ldquo;Excelente profissional! A Mari é muito atenciosa, cuidadosa e transmite muita segurança. Atendimento impecável desde a recepção até o procedimento. Me senti super bem acolhida e o resultado ficou maravilhoso. Recomendo de olhos fechados!&rdquo;
-        </p>
-
-        <div class="mt-6 flex items-center justify-center gap-3">
-          <div class="w-11 h-11 rounded-full bg-bege-300 text-verde-800 font-display text-lg flex items-center justify-center">C</div>
-          <div class="text-left">
-            <p class="font-medium text-bege-50">Camila Vieira</p>
-            <p class="text-xs text-bege-100/60">Avaliação no Google</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="mt-6 grid sm:grid-cols-3 gap-5 max-w-5xl mx-auto">
-        <div class="bg-verde-700/40 border border-verde-600/70 rounded-2xl p-6">
-          <div class="flex items-center gap-1 text-bege-300">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.6 6.8L12 16.9 5.8 20.3l1.6-6.8L2.2 8.9l6.9-.6z"/></svg>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.6 6.8L12 16.9 5.8 20.3l1.6-6.8L2.2 8.9l6.9-.6z"/></svg>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.6 6.8L12 16.9 5.8 20.3l1.6-6.8L2.2 8.9l6.9-.6z"/></svg>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.6 6.8L12 16.9 5.8 20.3l1.6-6.8L2.2 8.9l6.9-.6z"/></svg>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.6 6.8L12 16.9 5.8 20.3l1.6-6.8L2.2 8.9l6.9-.6z"/></svg>
-          </div>
-          <p class="mt-4 text-sm text-bege-50/90 leading-relaxed">&ldquo;Super atenciosa, detalhista, e excelente profissional que indico desde uma avaliação geral até procedimentos mais complexos.&rdquo;</p>
-          <p class="mt-4 text-xs font-medium text-bege-100/85">Rubens Milaré <span class="text-bege-100/50 font-normal">&middot; Local Guide no Google</span></p>
-        </div>
-        <div class="bg-verde-700/40 border border-verde-600/70 rounded-2xl p-6">
-          <div class="flex items-center gap-1 text-bege-300">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.6 6.8L12 16.9 5.8 20.3l1.6-6.8L2.2 8.9l6.9-.6z"/></svg>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.6 6.8L12 16.9 5.8 20.3l1.6-6.8L2.2 8.9l6.9-.6z"/></svg>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.6 6.8L12 16.9 5.8 20.3l1.6-6.8L2.2 8.9l6.9-.6z"/></svg>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.6 6.8L12 16.9 5.8 20.3l1.6-6.8L2.2 8.9l6.9-.6z"/></svg>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.6 6.8L12 16.9 5.8 20.3l1.6-6.8L2.2 8.9l6.9-.6z"/></svg>
-          </div>
-          <p class="mt-4 text-sm text-bege-50/90 leading-relaxed">&ldquo;Atendimento nota 10! A Dra. Mariana é extremamente atenciosa, cuidadosa e muito profissional. Dá para perceber o quanto ela ama o que faz e preza pela excelência.&rdquo;</p>
-          <p class="mt-4 text-xs font-medium text-bege-100/85">Jocelene Alves Santos <span class="text-bege-100/50 font-normal">&middot; Avaliação no Google</span></p>
-        </div>
-        <div class="bg-verde-700/40 border border-verde-600/70 rounded-2xl p-6">
-          <div class="flex items-center gap-1 text-bege-300">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.6 6.8L12 16.9 5.8 20.3l1.6-6.8L2.2 8.9l6.9-.6z"/></svg>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.6 6.8L12 16.9 5.8 20.3l1.6-6.8L2.2 8.9l6.9-.6z"/></svg>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.6 6.8L12 16.9 5.8 20.3l1.6-6.8L2.2 8.9l6.9-.6z"/></svg>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.6 6.8L12 16.9 5.8 20.3l1.6-6.8L2.2 8.9l6.9-.6z"/></svg>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.6 6.8L12 16.9 5.8 20.3l1.6-6.8L2.2 8.9l6.9-.6z"/></svg>
-          </div>
-          <p class="mt-4 text-sm text-bege-50/90 leading-relaxed">&ldquo;Ótima profissional! Meu tratamento para bruxismo trouxe uma grande melhora na minha qualidade de vida. Muito atenciosa, competente e clara nas explicações.&rdquo;</p>
-          <p class="mt-4 text-xs font-medium text-bege-100/85">Gabriela Gomes <span class="text-bege-100/50 font-normal">&middot; Avaliação no Google</span></p>
-        </div>
-      </div>
-
-      <div class="mt-8 text-center">
-        <a href="https://www.google.com/maps/search/Mariana+Furuse+dentista+Ara%C3%A7atuba" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-sm font-medium text-bege-100/85 hover:text-white transition-colors">
-          Ver todas as 28 avaliações no Google
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- SOBRE A DRA -->
-  <section id="sobre" class="py-16 sm:py-24 bg-white">
-    <div class="container-page">
-      <div class="grid lg:grid-cols-2 gap-12 items-center">
-        <div class="relative order-2 lg:order-1 max-w-md mx-auto lg:max-w-none">
-          <div class="rounded-4xl overflow-hidden shadow-soft border border-bege-200/60">
-            <img src="assets/fotos/dra/retrato-arco.jpg" alt="Retrato da Dra. Mariana Furuse, cirurgiã-dentista em Araçatuba - SP" width="1100" height="1650" loading="lazy" class="w-full h-[460px] sm:h-[540px] object-cover" />
-          </div>
-          <div class="absolute -bottom-6 left-6 right-6 sm:left-auto sm:right-6 sm:w-44 bg-white rounded-2xl shadow-soft border border-bege-200/70 overflow-hidden">
-            <img src="assets/fotos/dra/retrato-estudio.jpg" alt="Dra. Mariana Furuse sorrindo, retrato de estúdio" width="1400" height="2100" loading="lazy" class="w-full h-32 sm:h-40 object-cover object-[center_42%]" />
-          </div>
-          <div class="absolute -top-5 -left-3 sm:-left-8 bg-verde-700 text-bege-50 rounded-2xl shadow-soft px-5 py-4">
-            <p class="font-display text-lg">Dra. Mariana</p>
-            <p class="text-xs text-bege-100/75">CROSP 176030</p>
-          </div>
-        </div>
-
-        <div class="order-1 lg:order-2">
-          <span class="eyebrow">Filosofia de Atendimento</span>
-          <blockquote class="mt-5 font-display text-2xl sm:text-3xl text-verde-800 leading-snug">
-            &ldquo;Atenção aos detalhes, cuidado e acolhimento em primeiro lugar. Com profunda empatia por cada paciente, busco resolver suas necessidades através de um planejamento preciso e personalizado. Acima de tudo, só ofereço e proponho o tratamento que eu estaria disposta a realizar em mim mesma se estivesse no seu lugar.&rdquo;
-          </blockquote>
-          <p class="mt-4 text-tinta/60">&mdash; Dra. Mariana Furuse</p>
-
-          <div class="mt-8 pt-8 border-t border-bege-200">
-            <span class="eyebrow">Trajetória e Prova de Autoridade</span>
-            <h2 class="mt-4 font-display text-3xl text-verde-800 leading-tight">Acolhimento, Respeito e Excelência Odontológica</h2>
-            <p class="mt-4 text-tinta/70 leading-relaxed">A Dra. Mariana Furuse atua em Araçatuba&ndash;SP com uma odontologia leve, humana e voltada para a saúde e bem-estar do paciente. Seu foco é oferecer o melhor planejamento possível, priorizando a prevenção, o alívio de dores, a longevidade e a estética natural do sorriso.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Bastidores -->
-      <div class="mt-16 sm:mt-20">
-        <p class="eyebrow text-center">No Dia a Dia da Clínica</p>
-        <h3 class="mt-3 font-display text-2xl sm:text-3xl text-verde-800 text-center">Bastidores do Atendimento</h3>
-        <div class="mt-8 grid grid-cols-3 gap-3 sm:gap-5">
-          <div class="rounded-3xl overflow-hidden shadow-soft border border-bege-200/60">
-            <img src="assets/fotos/dra/bastidores-consultorio.jpg" alt="Dra. Mariana Furuse anotando o planejamento do tratamento no consultório" width="900" height="1350" loading="lazy" class="w-full h-40 sm:h-64 object-cover" />
-          </div>
-          <div class="rounded-3xl overflow-hidden shadow-soft border border-bege-200/60">
-            <img src="assets/fotos/dra/bastidores-instrumento.jpg" alt="Dra. Mariana Furuse com instrumental odontológico, sorrindo durante o atendimento" width="900" height="1350" loading="lazy" class="w-full h-40 sm:h-64 object-cover" />
-          </div>
-          <div class="rounded-3xl overflow-hidden shadow-soft border border-bege-200/60">
-            <img src="assets/fotos/dra/bastidores-tablet.jpg" alt="Dra. Mariana Furuse analisando imagens do sorriso do paciente em tablet" width="900" height="1350" loading="lazy" class="w-full h-40 sm:h-64 object-cover" />
-          </div>
-        </div>
-      </div>
-
-      <!-- Formação -->
-      <div class="mt-20">
-        <h3 class="font-display text-2xl sm:text-3xl text-verde-800 text-center">Formação e Especializações Acadêmicas</h3>
-
-        <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <div class="card p-6">
-            <div class="w-10 h-10 rounded-xl bg-verde-100 text-verde-700 flex items-center justify-center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10L12 5 2 10l10 5 10-5zM6 12v5c0 1 2.5 3 6 3s6-2 6-3v-5"/></svg></div>
-            <h4 class="mt-4 font-display text-lg text-verde-800">FOA UNESP Araçatuba</h4>
-            <p class="mt-2 text-sm text-tinta/70 leading-relaxed">Cirurgiã-Dentista formada pela conceituada Faculdade de Odontologia de Araçatuba (FOA UNESP).</p>
-          </div>
-          <div class="card p-6">
-            <div class="w-10 h-10 rounded-xl bg-verde-100 text-verde-700 flex items-center justify-center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M2 12h20"/></svg></div>
-            <h4 class="mt-4 font-display text-lg text-verde-800">Atualização em Endodontia (Canal)</h4>
-            <p class="mt-2 text-sm text-tinta/70 leading-relaxed">Aperfeiçoamento em Tratamento de Canal pelo INSPE CURSOS com a Profª Juliana Quitino Trizzi.</p>
-          </div>
-          <div class="card p-6">
-            <div class="w-10 h-10 rounded-xl bg-verde-100 text-verde-700 flex items-center justify-center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
-            <h4 class="mt-4 font-display text-lg text-verde-800">Imersão em DTM, Bruxismo e Placas Oclusais</h4>
-            <p class="mt-2 text-sm text-tinta/70 leading-relaxed">Especialização em Fluxo Clínico de DTM e Placas de Bruxismo com Profº Paulo Conti (FOB USP Bauru).</p>
-          </div>
-          <div class="card p-6">
-            <div class="w-10 h-10 rounded-xl bg-verde-100 text-verde-700 flex items-center justify-center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a5 5 0 015 5c0 3-2 4-2 7h-6c0-3-2-4-2-7a5 5 0 015-5zM9 20h6"/></svg></div>
-            <h4 class="mt-4 font-display text-lg text-verde-800">Protetor Bucal Esportivo Personalizado</h4>
-            <p class="mt-2 text-sm text-tinta/70 leading-relaxed">Capacitação teórico-prática na confecção artesanal sob medida com Profº Eli Namba (Sports Dental).</p>
-          </div>
-          <div class="card p-6">
-            <div class="w-10 h-10 rounded-xl bg-verde-100 text-verde-700 flex items-center justify-center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="7" r="4"/><path d="M2 21v-2a4 4 0 014-4h6a4 4 0 014 4v2"/><circle cx="17" cy="7" r="4" opacity=".5"/></svg></div>
-            <h4 class="mt-4 font-display text-lg text-verde-800">Comunidade Dentista PRO</h4>
-            <p class="mt-2 text-sm text-tinta/70 leading-relaxed">Membro da Comunidade Dentista PRO do Profº Paulo Vinícius Soares para alta performance em odontologia.</p>
-          </div>
-          <div class="card p-6 bg-verde-50 border-verde-100">
-            <div class="w-10 h-10 rounded-xl bg-verde-600 text-white flex items-center justify-center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
-            <h4 class="mt-4 font-display text-lg text-verde-800">Atendimento com Horário Marcado</h4>
-            <p class="mt-2 text-sm text-tinta/70 leading-relaxed">R. Fernando Costa, 223 - Bairro das Bandeiras, Araçatuba - SP</p>
-          </div>
-        </div>
+      <div class="mt-16 grid md:grid-cols-3 border-t border-bege-200/25">
+        <figure class="pt-8 pb-4 md:pr-8">
+          <blockquote class="leading-relaxed text-bege-100/90">“Super atenciosa, detalhista, e excelente profissional que indico desde uma avaliação geral até procedimentos mais complexos.”</blockquote>
+          <figcaption class="mt-5 text-[11px] uppercase tracking-label text-bege-200/70">Rubens Milaré · Google</figcaption>
+        </figure>
+        <figure class="pt-8 pb-4 md:px-8 md:border-l border-bege-200/25">
+          <blockquote class="leading-relaxed text-bege-100/90">“Atendimento nota 10! A Dra. Mariana é extremamente atenciosa, cuidadosa e muito profissional. Dá para perceber o quanto ela ama o que faz e preza pela excelência.”</blockquote>
+          <figcaption class="mt-5 text-[11px] uppercase tracking-label text-bege-200/70">Jocelene Alves Santos · Google</figcaption>
+        </figure>
+        <figure class="pt-8 pb-4 md:pl-8 md:border-l border-bege-200/25">
+          <blockquote class="leading-relaxed text-bege-100/90">“Ótima profissional! Meu tratamento para bruxismo trouxe uma grande melhora na minha qualidade de vida. Muito atenciosa, competente e clara nas explicações.”</blockquote>
+          <figcaption class="mt-5 text-[11px] uppercase tracking-label text-bege-200/70">Gabriela Gomes · Google</figcaption>
+        </figure>
       </div>
     </div>
   </section>
 
   <!-- FAQ -->
-  <section id="faq" class="py-16 sm:py-24 bg-bege-100">
-    <div class="container-page">
-      <div class="max-w-2xl mx-auto text-center">
-        <span class="eyebrow">Tire Suas Dúvidas</span>
-        <h2 class="section-title mt-4">Perguntas Frequentes <span class="text-verde-600">(FAQ)</span></h2>
-        <p class="mt-4 text-tinta/70 text-lg">Transparência em cada etapa. Confira as respostas para as dúvidas mais comuns dos nossos pacientes.</p>
+  <section id="faq" class="py-20 sm:py-28">
+    <div class="container-page grid lg:grid-cols-12 gap-12">
+      <div class="lg:col-span-4">
+        <p class="label label-line">Dúvidas</p>
+        <h2 class="section-title mt-6">Perguntas frequentes</h2>
+        <div class="mt-10 flex flex-wrap lg:flex-col lg:items-start gap-x-6 gap-y-3" id="faq-filters">
+          <button data-cat="todos" class="faq-filter-btn tab is-active">Todas</button>
+          <button data-cat="urgencia" class="faq-filter-btn tab">Urgência e canal</button>
+          <button data-cat="geral" class="faq-filter-btn tab">Geral</button>
+          <button data-cat="clareamento" class="faq-filter-btn tab">Clareamento</button>
+        </div>
       </div>
 
-      <div class="mt-10 flex flex-wrap justify-center gap-2" id="faq-filters">
-        <button data-cat="todos" class="faq-filter-btn active px-4 py-2 rounded-full text-sm font-medium bg-verde-600 text-white">Todos</button>
-        <button data-cat="urgencia" class="faq-filter-btn px-4 py-2 rounded-full text-sm font-medium bg-white border border-bege-300 text-tinta/70 hover:bg-verde-50">Urgência &amp; Canal</button>
-        <button data-cat="geral" class="faq-filter-btn px-4 py-2 rounded-full text-sm font-medium bg-white border border-bege-300 text-tinta/70 hover:bg-verde-50">Geral</button>
-        <button data-cat="clareamento" class="faq-filter-btn px-4 py-2 rounded-full text-sm font-medium bg-white border border-bege-300 text-tinta/70 hover:bg-verde-50">Clareamento</button>
-      </div>
-
-      <div class="mt-10 max-w-3xl mx-auto space-y-4" id="faq-list">
-
-        <div class="faq-item card !shadow-none border-bege-200" data-cat="urgencia" data-open="true">
-          <button class="faq-question w-full flex items-center justify-between gap-4 text-left px-6 py-5">
-            <span class="flex items-center gap-3 font-medium text-verde-800"><span class="text-verde-500">?</span>Tenho uma dor forte no dente. A Dra. Mariana atende urgência / canal?</span>
-            <svg class="faq-chevron shrink-0 text-verde-600" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-          </button>
-          <div class="faq-answer px-6">
-            <div class="pb-5 text-sm text-tinta/70 leading-relaxed">Sim! A Dra. Mariana possui atualização em Endodontia (Tratamento de Canal) e conta com sensor de Raio X digital na clínica para identificar a causa da dor no mesmo instante e realizar o atendimento de forma ágil, resolutiva e sem dor.</div>
+      <div class="lg:col-span-8">
+        <div class="border-t border-verde/25" id="faq-list">
+          <div class="faq-item border-b border-verde/20" data-cat="urgencia" data-open="true">
+            <button class="faq-question w-full flex items-center justify-between gap-6 text-left py-6">
+              <span class="font-display text-lg sm:text-xl text-verde-800">Tenho uma dor forte no dente. A Dra. Mariana atende urgência / canal?</span>
+              <span class="faq-icon text-verde"></span>
+            </button>
+            <div class="faq-answer">
+              <div class="pb-6 pr-10 text-[15px] text-tinta/70 leading-relaxed">Sim! A Dra. Mariana possui atualização em Endodontia (Tratamento de Canal) e conta com sensor de Raio X digital na clínica para identificar a causa da dor no mesmo instante e realizar o atendimento de forma ágil, resolutiva e sem dor.</div>
+            </div>
+          </div>
+          <div class="faq-item border-b border-verde/20" data-cat="urgencia" data-open="false">
+            <button class="faq-question w-full flex items-center justify-between gap-6 text-left py-6">
+              <span class="font-display text-lg sm:text-xl text-verde-800">O tratamento de canal dói?</span>
+              <span class="faq-icon text-verde"></span>
+            </button>
+            <div class="faq-answer">
+              <div class="pb-6 pr-10 text-[15px] text-tinta/70 leading-relaxed">Não. Com as técnicas e anestésicos atuais, o tratamento é realizado de forma confortável. O objetivo do canal é justamente eliminar a dor causada pela infecção e preservar o dente.</div>
+            </div>
+          </div>
+          <div class="faq-item border-b border-verde/20" data-cat="urgencia" data-open="false">
+            <button class="faq-question w-full flex items-center justify-between gap-6 text-left py-6">
+              <span class="font-display text-lg sm:text-xl text-verde-800">Tratamento de canal demora?</span>
+              <span class="faq-icon text-verde"></span>
+            </button>
+            <div class="faq-answer">
+              <div class="pb-6 pr-10 text-[15px] text-tinta/70 leading-relaxed">Nem sempre. Graças ao planejamento individualizado e ao uso de tecnologias como o raio X digital, muitos tratamentos podem ser realizados em uma única sessão. Quando são necessárias mais consultas, isso acontece para garantir a segurança e a qualidade do tratamento.</div>
+            </div>
+          </div>
+          <div class="faq-item border-b border-verde/20" data-cat="geral" data-open="false">
+            <button class="faq-question w-full flex items-center justify-between gap-6 text-left py-6">
+              <span class="font-display text-lg sm:text-xl text-verde-800">Tenho medo de dentista. Como é o atendimento?</span>
+              <span class="faq-icon text-verde"></span>
+            </button>
+            <div class="faq-answer">
+              <div class="pb-6 pr-10 text-[15px] text-tinta/70 leading-relaxed">O atendimento é realizado com acolhimento, empatia e respeito ao tempo de cada paciente. Cada etapa do tratamento é explicada de forma clara para que você se sinta seguro e confiante durante todo o processo.</div>
+            </div>
+          </div>
+          <div class="faq-item border-b border-verde/20" data-cat="clareamento" data-open="false">
+            <button class="faq-question w-full flex items-center justify-between gap-6 text-left py-6">
+              <span class="font-display text-lg sm:text-xl text-verde-800">Vocês fazem clareamento dental?</span>
+              <span class="faq-icon text-verde"></span>
+            </button>
+            <div class="faq-answer">
+              <div class="pb-6 pr-10 text-[15px] text-tinta/70 leading-relaxed">Sim! Após uma avaliação clínica, é indicado o protocolo mais adequado para cada paciente, sempre priorizando a saúde dos dentes e resultados naturais.</div>
+            </div>
+          </div>
+          <div class="faq-item border-b border-verde/20" data-cat="clareamento" data-open="false">
+            <button class="faq-question w-full flex items-center justify-between gap-6 text-left py-6">
+              <span class="font-display text-lg sm:text-xl text-verde-800">Clareamento dental causa sensibilidade?</span>
+              <span class="faq-icon text-verde"></span>
+            </button>
+            <div class="faq-answer">
+              <div class="pb-6 pr-10 text-[15px] text-tinta/70 leading-relaxed">A sensibilidade nem sempre acontece após o clareamento, mas quando acontece, hoje existem formas de minimizá-la. Na clínica, utilizamos um protocolo de dessensibilização que inclui a fotobiomodulação (laser), ajudando a reduzir a sensibilidade pós-operatória e proporcionando mais conforto durante o tratamento &mdash; essa sessão de dessensibilização já está inclusa no tratamento.</div>
+            </div>
+          </div>
+          <div class="faq-item border-b border-verde/20" data-cat="geral" data-open="false">
+            <button class="faq-question w-full flex items-center justify-between gap-6 text-left py-6">
+              <span class="font-display text-lg sm:text-xl text-verde-800">Como funciona a primeira consulta?</span>
+              <span class="faq-icon text-verde"></span>
+            </button>
+            <div class="faq-answer">
+              <div class="pb-6 pr-10 text-[15px] text-tinta/70 leading-relaxed">A primeira consulta é destinada à avaliação completa da saúde bucal, realização dos exames necessários e elaboração de um plano de tratamento personalizado, de acordo com as necessidades de cada paciente.</div>
+            </div>
           </div>
         </div>
 
-        <div class="faq-item card !shadow-none border-bege-200" data-cat="urgencia" data-open="false">
-          <button class="faq-question w-full flex items-center justify-between gap-4 text-left px-6 py-5">
-            <span class="flex items-center gap-3 font-medium text-verde-800"><span class="text-verde-500">?</span>O tratamento de canal dói?</span>
-            <svg class="faq-chevron shrink-0 text-verde-600" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-          </button>
-          <div class="faq-answer px-6">
-            <div class="pb-5 text-sm text-tinta/70 leading-relaxed">Não. Com as técnicas e anestésicos atuais, o tratamento é realizado de forma confortável. O objetivo do canal é justamente eliminar a dor causada pela infecção e preservar o dente.</div>
-          </div>
-        </div>
-
-        <div class="faq-item card !shadow-none border-bege-200" data-cat="urgencia" data-open="false">
-          <button class="faq-question w-full flex items-center justify-between gap-4 text-left px-6 py-5">
-            <span class="flex items-center gap-3 font-medium text-verde-800"><span class="text-verde-500">?</span>Tratamento de canal demora?</span>
-            <svg class="faq-chevron shrink-0 text-verde-600" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-          </button>
-          <div class="faq-answer px-6">
-            <div class="pb-5 text-sm text-tinta/70 leading-relaxed">Nem sempre. Graças ao planejamento individualizado e ao uso de tecnologias como o raio X digital, muitos tratamentos podem ser realizados em uma única sessão. Quando são necessárias mais consultas, isso acontece para garantir a segurança e a qualidade do tratamento.</div>
-          </div>
-        </div>
-
-        <div class="faq-item card !shadow-none border-bege-200" data-cat="geral" data-open="false">
-          <button class="faq-question w-full flex items-center justify-between gap-4 text-left px-6 py-5">
-            <span class="flex items-center gap-3 font-medium text-verde-800"><span class="text-verde-500">?</span>Tenho medo de dentista. Como é o atendimento?</span>
-            <svg class="faq-chevron shrink-0 text-verde-600" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-          </button>
-          <div class="faq-answer px-6">
-            <div class="pb-5 text-sm text-tinta/70 leading-relaxed">O atendimento é realizado com acolhimento, empatia e respeito ao tempo de cada paciente. Cada etapa do tratamento é explicada de forma clara para que você se sinta seguro e confiante durante todo o processo.</div>
-          </div>
-        </div>
-
-        <div class="faq-item card !shadow-none border-bege-200" data-cat="clareamento" data-open="false">
-          <button class="faq-question w-full flex items-center justify-between gap-4 text-left px-6 py-5">
-            <span class="flex items-center gap-3 font-medium text-verde-800"><span class="text-verde-500">?</span>Vocês fazem clareamento dental?</span>
-            <svg class="faq-chevron shrink-0 text-verde-600" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-          </button>
-          <div class="faq-answer px-6">
-            <div class="pb-5 text-sm text-tinta/70 leading-relaxed">Sim! Após uma avaliação clínica, é indicado o protocolo mais adequado para cada paciente, sempre priorizando a saúde dos dentes e resultados naturais.</div>
-          </div>
-        </div>
-
-        <div class="faq-item card !shadow-none border-bege-200" data-cat="clareamento" data-open="false">
-          <button class="faq-question w-full flex items-center justify-between gap-4 text-left px-6 py-5">
-            <span class="flex items-center gap-3 font-medium text-verde-800"><span class="text-verde-500">?</span>Clareamento dental causa sensibilidade?</span>
-            <svg class="faq-chevron shrink-0 text-verde-600" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-          </button>
-          <div class="faq-answer px-6">
-            <div class="pb-5 text-sm text-tinta/70 leading-relaxed">A sensibilidade nem sempre acontece após o clareamento, mas quando acontece, hoje existem formas de minimizá-la. Na clínica, utilizamos um protocolo de dessensibilização que inclui a fotobiomodulação (laser), ajudando a reduzir a sensibilidade pós-operatória e proporcionando mais conforto durante o tratamento &mdash; essa sessão de dessensibilização já está inclusa no tratamento.</div>
-          </div>
-        </div>
-
-        <div class="faq-item card !shadow-none border-bege-200" data-cat="geral" data-open="false">
-          <button class="faq-question w-full flex items-center justify-between gap-4 text-left px-6 py-5">
-            <span class="flex items-center gap-3 font-medium text-verde-800"><span class="text-verde-500">?</span>Como funciona a primeira consulta?</span>
-            <svg class="faq-chevron shrink-0 text-verde-600" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-          </button>
-          <div class="faq-answer px-6">
-            <div class="pb-5 text-sm text-tinta/70 leading-relaxed">A primeira consulta é destinada à avaliação completa da saúde bucal, realização dos exames necessários e elaboração de um plano de tratamento personalizado, de acordo com as necessidades de cada paciente.</div>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="mt-12 text-center card !shadow-none max-w-xl mx-auto p-8">
-        <h3 class="font-display text-xl text-verde-800">Não encontrou sua dúvida?</h3>
-        <p class="mt-2 text-sm text-tinta/70">Nossa equipe está disponível no WhatsApp para ajudar você pessoalmente.</p>
-        <a href="https://wa.me/5518996001588?text=Ol%C3%A1%20Dra.%20Mariana!%20Tenho%20uma%20d%C3%BAvida%20sobre%20o%20atendimento." target="_blank" rel="noopener" class="btn-primary mt-5">Falar no WhatsApp</a>
+        <p class="mt-10 text-tinta/70">Não encontrou sua dúvida? <a href="https://wa.me/5518996001588?text=Ol%C3%A1%20Dra.%20Mariana!%20Tenho%20uma%20d%C3%BAvida%20sobre%20o%20atendimento." target="_blank" rel="noopener" class="text-link">Fale com a equipe pelo WhatsApp</a></p>
       </div>
     </div>
   </section>
 
-  <!-- CTA FINAL -->
-  <section class="py-20 sm:py-28 bg-verde-800 text-bege-50 relative overflow-hidden">
-    <div class="container-page text-center relative">
-      <span class="eyebrow !bg-verde-700 !text-bege-100">Experiência Odontológica Única em Araçatuba &ndash; SP</span>
-      <h2 class="section-title !text-bege-50 mt-5 max-w-3xl mx-auto">Seu sorriso merece um <span class="text-bege-300">cuidado especial.</span></h2>
-      <p class="mt-5 max-w-xl mx-auto text-bege-100/80 text-lg">Agende sua avaliação com a Dra. Mariana Furuse e viva a experiência de um atendimento verdadeiramente acolhedor, transparente e com tecnologia de ponta.</p>
-      <a href="https://wa.me/5518996001588" target="_blank" rel="noopener" class="btn-light mt-8">Agendar pelo WhatsApp</a>
-      <p class="mt-8 text-xs uppercase tracking-[0.15em] text-bege-100/50">Dra. Mariana Furuse &bull; FOA UNESP &bull; CROSP 176030</p>
-    </div>
-  </section>
-
-  <!-- LOCALIZAÇÃO & AGENDAMENTO -->
-  <section id="contato" class="py-16 sm:py-24 bg-white">
+  <!-- CONTATO -->
+  <section id="contato" class="py-20 sm:py-28 bg-bege-200">
     <div class="container-page">
-      <div class="max-w-2xl mx-auto text-center">
-        <span class="eyebrow">Localização &amp; Agendamento</span>
-        <h2 class="section-title mt-4">Estamos à sua disposição em <span class="text-verde-600">Araçatuba</span></h2>
-        <p class="mt-4 text-tinta/70 text-lg">Agende seu atendimento com antecedência para desfrutar de uma consulta privativa, pontual e exclusiva na R. Fernando Costa, 223 - Bairro das Bandeiras, Araçatuba - SP.</p>
-      </div>
+      <div class="grid lg:grid-cols-12 gap-12 lg:gap-16">
+        <div class="lg:col-span-5">
+          <p class="label label-line">Contato</p>
+          <h2 class="section-title mt-6">Agende sua consulta</h2>
+          <p class="mt-6 leading-relaxed text-tinta/70">Preencha os dados e a mensagem já abre pronta no WhatsApp da clínica.</p>
 
-      <div class="mt-12 grid lg:grid-cols-5 gap-8">
-        <div class="lg:col-span-3 card p-7 sm:p-10">
-          <p class="eyebrow !bg-transparent !px-0 !text-verde-600">Agendamento Direto</p>
-          <h3 class="font-display text-2xl text-verde-800 mt-2">Agende seu Atendimento em Araçatuba</h3>
-          <p class="mt-2 text-sm text-tinta/65">Preencha os dados abaixo para iniciar seu contato direto via WhatsApp com a Dra. Mariana Furuse.</p>
+          <dl class="mt-12 space-y-7 text-sm">
+            <div>
+              <dt class="label">Endereço</dt>
+              <dd class="mt-2 text-tinta/80"><a href="https://maps.google.com/?q=R.+Fernando+Costa,+223+-+Bairro+das+Bandeiras,+Ara%C3%A7atuba+-+SP" target="_blank" rel="noopener" class="hover:text-verde-700">R. Fernando Costa, 223 &ndash; Bairro das Bandeiras<br />Araçatuba &ndash; SP</a></dd>
+            </div>
+            <div>
+              <dt class="label">Horário</dt>
+              <dd class="mt-2 text-tinta/80">Segunda a sábado, com agendamento prévio</dd>
+            </div>
+            <div>
+              <dt class="label">WhatsApp</dt>
+              <dd class="mt-2 text-tinta/80"><a href="https://wa.me/5518996001588" target="_blank" rel="noopener" class="hover:text-verde-700">(18) 99600-1588</a></dd>
+            </div>
+            <div>
+              <dt class="label">Instagram</dt>
+              <dd class="mt-2 text-tinta/80"><a href="https://instagram.com/marianafuruse" target="_blank" rel="noopener" class="hover:text-verde-700">@marianafuruse</a></dd>
+            </div>
+          </dl>
+        </div>
 
-          <form id="agendar-form" class="mt-7 grid sm:grid-cols-2 gap-5">
-            <div class="sm:col-span-1">
-              <label for="nome" class="block text-sm font-medium text-tinta/80 mb-1.5">Nome Completo *</label>
-              <input id="nome" name="nome" type="text" required placeholder="Seu nome completo" class="w-full rounded-xl border border-bege-300 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-verde-400" />
+        <div class="lg:col-span-7">
+          <form id="agendar-form" class="grid sm:grid-cols-2 gap-x-8 gap-y-7 bg-bege-50 p-7 sm:p-10">
+            <div>
+              <label for="nome" class="label !text-[10px]">Nome completo</label>
+              <input id="nome" name="nome" type="text" required placeholder="Seu nome" class="field" />
             </div>
-            <div class="sm:col-span-1">
-              <label for="telefone" class="block text-sm font-medium text-tinta/80 mb-1.5">Telefone / WhatsApp *</label>
-              <input id="telefone" name="telefone" type="tel" required placeholder="(18) 99999-9999" class="w-full rounded-xl border border-bege-300 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-verde-400" />
+            <div>
+              <label for="telefone" class="label !text-[10px]">Telefone / WhatsApp</label>
+              <input id="telefone" name="telefone" type="tel" required placeholder="(18) 99999-9999" class="field" />
             </div>
-            <div class="sm:col-span-1">
-              <label for="cidade" class="block text-sm font-medium text-tinta/80 mb-1.5">Cidade *</label>
-              <input id="cidade" name="cidade" type="text" required placeholder="Araçatuba - SP" class="w-full rounded-xl border border-bege-300 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-verde-400" />
+            <div>
+              <label for="cidade" class="label !text-[10px]">Cidade</label>
+              <input id="cidade" name="cidade" type="text" required placeholder="Araçatuba - SP" class="field" />
             </div>
-            <div class="sm:col-span-1">
-              <label for="servico" class="block text-sm font-medium text-tinta/80 mb-1.5">Serviço de Interesse *</label>
-              <select id="servico" name="servico" required class="w-full rounded-xl border border-bege-300 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-verde-400 bg-white">
-                <option value="Primeira Consulta">Primeira Consulta (R$125 abatidos no tratamento)</option>
-                <option value="Endodontia (Canal)">Endodontia / Tratamento de Canal (Urgências)</option>
-                <option value="Limpeza e Profilaxia">Limpeza / Profilaxia Profunda</option>
-                <option value="Clareamento Dental">Clareamento Dental</option>
-                <option value="Restauração Estética">Restauração Estética em Resina</option>
-                <option value="Estética / Lentes">Estética Dental / Lentes de Porcelana</option>
-                <option value="Placa de Bruxismo">Placa de Bruxismo (Placa Oclusal)</option>
-                <option value="Protetor Bucal Esportivo">Protetor Bucal Esportivo Personalizado</option>
+            <div>
+              <label for="servico" class="label !text-[10px]">Serviço de interesse</label>
+              <select id="servico" name="servico" required class="field">
+                <option value="Primeira Consulta">Primeira consulta</option>
+                <option value="Endodontia (Canal)">Canal / urgência</option>
+                <option value="Limpeza e Profilaxia">Limpeza</option>
+                <option value="Clareamento Dental">Clareamento</option>
+                <option value="Restauração Estética">Restauração em resina</option>
+                <option value="Estética / Lentes">Estética / lentes de porcelana</option>
+                <option value="Placa de Bruxismo">Placa de bruxismo</option>
+                <option value="Protetor Bucal Esportivo">Protetor bucal esportivo</option>
               </select>
             </div>
-            <button type="submit" class="btn-primary sm:col-span-2 justify-center">Enviar Solicitação pelo WhatsApp</button>
+            <button type="submit" class="btn-primary sm:col-span-2 mt-2">Enviar pelo WhatsApp</button>
           </form>
-        </div>
 
-        <div class="lg:col-span-2 flex flex-col gap-5">
-          <a href="https://maps.google.com/?q=R.+Fernando+Costa,+223+-+Bairro+das+Bandeiras,+Ara%C3%A7atuba+-+SP" target="_blank" rel="noopener" class="card p-6 flex items-start gap-4 hover:border-verde-300 transition-colors">
-            <div class="w-11 h-11 rounded-xl bg-verde-100 text-verde-700 flex items-center justify-center shrink-0"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-            <div>
-              <h4 class="font-display text-lg text-verde-800">Endereço em Araçatuba</h4>
-              <p class="text-sm text-tinta/65 mt-1">R. Fernando Costa, 223 - Bairro das Bandeiras, Araçatuba - SP</p>
-            </div>
-          </a>
-
-          <a href="https://wa.me/5518996001588" target="_blank" rel="noopener" class="card p-6 flex items-start gap-4 hover:border-verde-300 transition-colors">
-            <div class="w-11 h-11 rounded-xl bg-verde-100 text-verde-700 flex items-center justify-center shrink-0"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.47 14.38c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.47-.89-.79-1.48-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.14-.14.3-.35.45-.53.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.6-.91-2.2-.24-.58-.49-.5-.67-.5h-.57c-.2 0-.52.07-.79.37s-1.04 1.02-1.04 2.48 1.07 2.87 1.22 3.07c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.13-.27-.2-.57-.35zM12.04 2c-5.5 0-9.96 4.46-9.96 9.96 0 1.76.46 3.44 1.34 4.94L2 22l5.24-1.37a9.9 9.9 0 004.8 1.23h.01c5.5 0 9.96-4.46 9.96-9.96S17.54 2 12.04 2zm0 18.2h-.01a8.2 8.2 0 01-4.18-1.14l-.3-.18-3.11.82.83-3.03-.2-.31a8.24 8.24 0 01-1.26-4.4c0-4.56 3.71-8.27 8.27-8.27a8.23 8.23 0 018.26 8.27c0 4.56-3.71 8.24-8.3 8.24z"/></svg></div>
-            <div>
-              <h4 class="font-display text-lg text-verde-800">WhatsApp Direct</h4>
-              <p class="text-sm text-tinta/65 mt-1">+55 18 99600-1588</p>
-            </div>
-          </a>
-
-          <div class="card overflow-hidden h-52 lg:h-full min-h-[180px]">
+          <div class="mt-6 h-64 sm:h-72 bg-bege-100">
             <iframe
               title="Localização Dra. Mariana Furuse em Araçatuba SP"
-              class="w-full h-full border-0"
+              class="w-full h-full border-0 grayscale-[40%]"
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
               src="https://maps.google.com/maps?q=R.%20Fernando%20Costa%2C%20223%20-%20Bairro%20das%20Bandeiras%2C%20Ara%C3%A7atuba%20-%20SP&t=&z=16&ie=UTF8&iwloc=&output=embed">
@@ -819,65 +630,38 @@
 </main>
 
 <!-- FOOTER -->
-<footer class="bg-verde-900 text-bege-100">
-  <div class="container-page py-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
-    <div>
-      <img src="assets/logos/logo-cream-on-transparent.png" alt="Logo Dra. Mariana Furuse Odontologia" loading="lazy" class="h-14 w-auto" />
-      <p class="mt-4 text-sm text-bege-100/70 leading-relaxed">Odontologia de excelência, clínica geral e confecção personalizada de protetores bucais esportivos com tecnologia e acolhimento em Araçatuba &ndash; SP.</p>
-      <p class="mt-3 text-xs text-bege-100/50">CROSP 176030</p>
+<footer class="bg-verde text-bege-200">
+  <div class="container-page pt-16 pb-12 grid gap-12 lg:grid-cols-12">
+    <div class="lg:col-span-5">
+      <img src="assets/logos/logo-cream-on-transparent.png" alt="Dra. Mariana Furuse — Cirurgiã-Dentista, CROSP 176030" loading="lazy" width="4000" height="1392" class="w-64 h-auto" />
     </div>
-
-    <div>
-      <h5 class="font-display text-lg text-bege-50">Navegação</h5>
-      <ul class="mt-4 space-y-2.5 text-sm text-bege-100/70">
-        <li><a href="#sobre" class="hover:text-white transition-colors">Sobre a Dra. Mariana</a></li>
-        <li><a href="servicos.html" class="hover:text-white transition-colors">Tratamentos &amp; Serviços</a></li>
-        <li><a href="#como-funciona" class="hover:text-white transition-colors">Como Funciona o Atendimento</a></li>
-        <li><a href="#depoimentos" class="hover:text-white transition-colors">Depoimentos de Pacientes</a></li>
-        <li><a href="#faq" class="hover:text-white transition-colors">Perguntas Frequentes</a></li>
-        <li><a href="#contato" class="hover:text-white transition-colors">Contato &amp; Mapa</a></li>
-      </ul>
+    <div class="lg:col-span-3 text-sm space-y-2 text-bege-200/80">
+      <p class="label !text-bege-200/60 mb-4">Clínica</p>
+      <p>R. Fernando Costa, 223 &ndash; Bairro das Bandeiras</p>
+      <p>Araçatuba &ndash; SP</p>
+      <p>Segunda a sábado, com horário marcado</p>
     </div>
-
-    <div>
-      <h5 class="font-display text-lg text-bege-50">Tratamentos</h5>
-      <ul class="mt-4 space-y-2.5 text-sm text-bege-100/70">
-        <li>&bull; Clínica Geral Odontológica</li>
-        <li>&bull; Limpeza Profissional e Prevenção</li>
-        <li>&bull; Clareamento Dental de Alta Precisão</li>
-        <li>&bull; Restaurações Estéticas</li>
-        <li>&bull; Avaliação Odontológica Completa</li>
-        <li>&bull; Protetor Bucal Esportivo Customizado</li>
-      </ul>
+    <div class="lg:col-span-2 text-sm space-y-2 text-bege-200/80">
+      <p class="label !text-bege-200/60 mb-4">Contato</p>
+      <p><a href="https://wa.me/5518996001588" target="_blank" rel="noopener" class="hover:text-bege-50">(18) 99600-1588</a></p>
+      <p><a href="https://instagram.com/marianafuruse" target="_blank" rel="noopener" class="hover:text-bege-50">@marianafuruse</a></p>
     </div>
-
-    <div>
-      <h5 class="font-display text-lg text-bege-50">Contato Direto</h5>
-      <p class="mt-4 text-sm text-bege-100/70">+55 18 99600-1588</p>
-      <p class="text-xs text-bege-100/50">Atendimento com hora marcada</p>
-      <div class="mt-4 flex gap-3">
-        <a href="https://wa.me/5518996001588" target="_blank" rel="noopener" class="w-10 h-10 rounded-full bg-verde-700 hover:bg-verde-600 flex items-center justify-center transition-colors" aria-label="WhatsApp">
-          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M17.47 14.38c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.47-.89-.79-1.48-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.14-.14.3-.35.45-.53.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.6-.91-2.2-.24-.58-.49-.5-.67-.5h-.57c-.2 0-.52.07-.79.37s-1.04 1.02-1.04 2.48 1.07 2.87 1.22 3.07c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.13-.27-.2-.57-.35zM12.04 2c-5.5 0-9.96 4.46-9.96 9.96 0 1.76.46 3.44 1.34 4.94L2 22l5.24-1.37a9.9 9.9 0 004.8 1.23h.01c5.5 0 9.96-4.46 9.96-9.96S17.54 2 12.04 2z"/></svg>
-        </a>
-        <a href="https://instagram.com/marianafuruse" target="_blank" rel="noopener" class="w-10 h-10 rounded-full bg-verde-700 hover:bg-verde-600 flex items-center justify-center transition-colors" aria-label="Instagram">
-          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="3.5"/><circle cx="17.5" cy="6.5" r="1"/></svg>
-        </a>
-      </div>
+    <div class="lg:col-span-2 text-sm space-y-2 text-bege-200/80">
+      <p class="label !text-bege-200/60 mb-4">Site</p>
+      <p><a href="index.html#sobre" class="hover:text-bege-50">Sobre</a></p>
+      <p><a href="servicos.html" class="hover:text-bege-50">Tratamentos</a></p>
+      <p><a href="index.html#faq" class="hover:text-bege-50">Dúvidas</a></p>
+      <p><a href="index.html#contato" class="hover:text-bege-50">Contato</a></p>
     </div>
   </div>
 
-  <div class="border-t border-verde-700/60">
-    <div class="container-page py-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-bege-100/55">
-      <p>&copy; 2026 Dra. Mariana Furuse - Todos os direitos reservados. CROSP 176030.</p>
-      <button id="privacy-link" class="hover:text-white transition-colors underline underline-offset-2">Política de Privacidade &amp; Cookies (LGPD)</button>
-    </div>
-  </div>
-
-  <div class="border-t border-verde-700/60">
-    <div class="container-page py-5 flex items-center justify-center">
-      <a href="https://wa.me/5518988229613" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-xs text-bege-100/60 hover:text-white transition-colors">
+  <div class="border-t border-bege-200/15">
+    <div class="container-page py-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-bege-200/55">
+      <p>&copy; 2026 Dra. Mariana Furuse &middot; CROSP 176030</p>
+      <button id="privacy-link" class="hover:text-bege-50 transition-colors">Privacidade e cookies (LGPD)</button>
+      <a href="https://wa.me/5518988229613" target="_blank" rel="noopener" class="inline-flex items-center gap-2 hover:text-bege-50 transition-colors">
         <span>desenvolvido por</span>
-        <span class="inline-flex items-center bg-white rounded-md px-2 py-1"><img src="assets/logos/flou-logo.png" alt="Flou" loading="lazy" class="h-4 w-auto" /></span>
+        <span class="inline-flex items-center bg-bege-50 px-2 py-1"><img src="assets/logos/flou-logo.png" alt="Flou" loading="lazy" class="h-3.5 w-auto" /></span>
       </a>
     </div>
   </div>
@@ -885,24 +669,23 @@
 
 <!-- Botão flutuante WhatsApp -->
 <a href="https://wa.me/5518996001588" target="_blank" rel="noopener" aria-label="Atendimento pelo WhatsApp"
-   class="fixed bottom-5 right-5 z-40 w-14 h-14 rounded-full bg-verde-600 hover:bg-verde-700 text-white shadow-soft flex items-center justify-center transition-transform hover:scale-105">
-  <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M17.47 14.38c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.47-.89-.79-1.48-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.14-.14.3-.35.45-.53.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.6-.91-2.2-.24-.58-.49-.5-.67-.5h-.57c-.2 0-.52.07-.79.37s-1.04 1.02-1.04 2.48 1.07 2.87 1.22 3.07c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.13-.27-.2-.57-.35zM12.04 2c-5.5 0-9.96 4.46-9.96 9.96 0 1.76.46 3.44 1.34 4.94L2 22l5.24-1.37a9.9 9.9 0 004.8 1.23h.01c5.5 0 9.96-4.46 9.96-9.96S17.54 2 12.04 2z"/></svg>
+   class="fixed bottom-5 right-5 z-40 w-14 h-14 rounded-full bg-verde text-bege-50 hover:bg-verde-700 flex items-center justify-center transition-colors shadow-[0_8px_24px_-8px_rgba(47,62,57,0.5)]">
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.47 14.38c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.47-.89-.79-1.48-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.14-.14.3-.35.45-.53.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.6-.91-2.2-.24-.58-.49-.5-.67-.5h-.57c-.2 0-.52.07-.79.37s-1.04 1.02-1.04 2.48 1.07 2.87 1.22 3.07c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.13-.27-.2-.57-.35zM12.04 2c-5.5 0-9.96 4.46-9.96 9.96 0 1.76.46 3.44 1.34 4.94L2 22l5.24-1.37a9.9 9.9 0 004.8 1.23h.01c5.5 0 9.96-4.46 9.96-9.96S17.54 2 12.04 2z"/></svg>
 </a>
 
 <!-- Banner LGPD -->
-<div id="privacy-banner" class="fixed bottom-5 left-5 right-5 sm:right-auto sm:max-w-sm z-40 bg-white border border-bege-200 rounded-2xl shadow-soft p-5">
-  <div class="flex items-start gap-3">
-    <div class="w-9 h-9 rounded-full bg-verde-100 text-verde-700 flex items-center justify-center shrink-0"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6z"/></svg></div>
+<div id="privacy-banner" class="fixed bottom-5 left-5 right-24 sm:right-auto sm:max-w-sm z-40 bg-bege-50 border border-verde/20 p-5 shadow-[0_12px_32px_-16px_rgba(47,62,57,0.45)]">
+  <div class="flex items-start gap-4">
     <div>
-      <p class="font-medium text-sm text-verde-800">Privacidade &amp; LGPD</p>
-      <p class="mt-1 text-xs text-tinta/65 leading-relaxed">Utilizamos cookies para personalizar e otimizar sua experiência de navegação em conformidade com a LGPD. Ao continuar, você concorda com nossa política de privacidade.</p>
-      <div class="mt-3 flex items-center gap-4">
-        <button id="privacy-accept" class="btn-primary !px-4 !py-2 text-xs">Entendi e Aceito</button>
-        <button id="privacy-terms" class="text-xs text-tinta/60 underline underline-offset-2 hover:text-verde-700">Política &amp; Termos</button>
+      <p class="label !text-[10px]">Privacidade</p>
+      <p class="mt-2 text-xs text-tinta/70 leading-relaxed">Usamos cookies para melhorar sua navegação, de acordo com a LGPD. Ao continuar, você concorda com nossa política de privacidade.</p>
+      <div class="mt-4 flex items-center gap-5">
+        <button id="privacy-accept" class="btn-primary !px-4 !py-2 !text-[10px]">Entendi</button>
+        <button id="privacy-terms" class="text-xs text-tinta/60 underline underline-offset-2 hover:text-verde-700">Política e termos</button>
       </div>
     </div>
-    <button id="privacy-close" class="ml-auto text-tinta/40 hover:text-tinta shrink-0" aria-label="Fechar banner de privacidade">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    <button id="privacy-close" class="ml-auto text-tinta/40 hover:text-tinta shrink-0" aria-label="Fechar aviso de privacidade">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
     </button>
   </div>
 </div>
@@ -910,3 +693,4 @@
 <script src="assets/js/main.js"></script>
 </body>
 </html>
+

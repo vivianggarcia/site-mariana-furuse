@@ -2,15 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
+/*
+  Identidade visual — Dra. Mariana Furuse
+  Cores: verde #66857b · bege #e4ded0 · areia #b9aa8d
+  Fontes: Antigua (primária) e Acumin Variable Concept (secundária).
+  Enquanto os arquivos licenciados dessas fontes não estiverem no servidor,
+  o site usa Jost (Light) e Archivo, que são as alternativas gratuitas mais próximas.
+  Para usar as fontes oficiais, basta declarar @font-face com os nomes
+  "Antigua" e "Acumin Variable Concept" — elas passam a ter prioridade automaticamente.
+*/
+
 @layer base {
   html {
     scroll-behavior: smooth;
   }
   body {
     @apply font-sans text-tinta bg-bege-50 antialiased;
+    font-size: 16px;
   }
   h1, h2, h3, h4 {
-    font-family: theme("fontFamily.display");
+    @apply font-display font-light;
+    letter-spacing: -0.01em;
+  }
+  ::selection {
+    @apply bg-verde text-bege-50;
   }
 }
 
@@ -19,48 +34,70 @@
     @apply max-w-content mx-auto px-5 sm:px-8 lg:px-10;
   }
 
-  .eyebrow {
-    @apply inline-flex items-center gap-2 rounded-full bg-verde-100 text-verde-700 text-xs sm:text-sm tracking-[0.18em] uppercase font-medium px-4 py-2;
+  /* Rótulo em caixa alta espaçada, como "CIRURGIÃ-DENTISTA | CROSP 176030" no logo */
+  .label {
+    @apply inline-flex items-center gap-3 text-[11px] sm:text-xs uppercase tracking-label font-normal text-verde;
+  }
+  .label-line::before {
+    content: "";
+    @apply block w-8 h-px bg-current opacity-70;
   }
 
   .btn {
-    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3.5 text-sm sm:text-base font-medium tracking-wide transition-all duration-200 whitespace-nowrap;
+    @apply inline-flex items-center justify-center gap-2.5 px-7 py-3.5 text-[12px] uppercase tracking-[0.2em] font-medium transition-colors duration-200 whitespace-nowrap;
   }
   .btn-primary {
-    @apply btn bg-verde-500 text-bege-50 hover:bg-verde-600 shadow-card;
+    @apply btn bg-verde text-bege-50 hover:bg-verde-700;
   }
   .btn-secondary {
-    @apply btn bg-transparent text-verde-700 border border-verde-300 hover:bg-verde-50;
+    @apply btn border border-verde text-verde hover:bg-verde hover:text-bege-50;
   }
   .btn-light {
-    @apply btn bg-bege-50 text-verde-700 hover:bg-bege-100;
+    @apply btn bg-bege-200 text-verde-800 hover:bg-bege-50;
+  }
+  .btn-ghost-light {
+    @apply btn border border-bege-200/60 text-bege-50 hover:bg-bege-50 hover:text-verde-800;
   }
 
   .section-title {
-    @apply font-display text-3xl sm:text-4xl lg:text-[2.75rem] leading-[1.1] text-verde-800;
+    @apply font-display font-light text-[2.1rem] sm:text-5xl lg:text-[3.4rem] leading-[1.05] text-verde-800;
   }
 
-  .card {
-    @apply bg-white rounded-3xl shadow-card border border-bege-200/70;
-  }
-
-  .highlight {
-    @apply bg-bege-200/70 text-verde-800 px-1.5 py-0.5 rounded;
+  .text-link {
+    @apply inline-flex items-center gap-2 text-sm text-verde-700 border-b border-verde/40 pb-0.5 hover:border-verde-700 transition-colors;
   }
 
   .nav-link {
-    @apply text-sm text-tinta/80 hover:text-verde-600 transition-colors;
+    @apply text-[12px] uppercase tracking-[0.16em] text-tinta/75 hover:text-verde transition-colors;
   }
+
+  /* Abas de texto (comparador, filtros, FAQ) */
+  .tab {
+    @apply pb-1.5 text-sm text-tinta/60 border-b border-transparent hover:text-verde-800 transition-colors whitespace-nowrap;
+  }
+  .tab.is-active {
+    @apply text-verde-800 border-verde;
+  }
+
+  .field {
+    @apply w-full bg-transparent border-0 border-b border-verde/35 px-0 py-3 text-[15px] text-tinta placeholder:text-tinta/35 focus:outline-none focus:ring-0 focus:border-verde transition-colors;
+  }
+}
+
+/* Moldura em arco (eco do arco da foto da Dra. e do símbolo) */
+.arch {
+  border-radius: 999px 999px 0 0;
+  overflow: hidden;
 }
 
 /* Before / after comparison slider */
 .compare {
   position: relative;
   overflow: hidden;
-  border-radius: 1.5rem;
   aspect-ratio: 4 / 3;
   user-select: none;
   touch-action: pan-y;
+  background: #e4ded0;
 }
 .compare img {
   position: absolute;
@@ -79,22 +116,30 @@
   top: 0;
   bottom: 0;
   left: var(--pos, 50%);
-  width: 3px;
-  background: #fff;
+  width: 1px;
+  background: #f6f4ee;
   transform: translateX(-50%);
-  box-shadow: 0 0 0 1px rgba(0,0,0,0.08);
 }
 .compare .compare-handle::after {
   content: "";
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 46px;
-  height: 46px;
+  width: 42px;
+  height: 42px;
   transform: translate(-50%, -50%);
   border-radius: 9999px;
-  background: #fff url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2366857b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polyline points='9 7 4 12 9 17'></polyline><polyline points='15 7 20 12 15 17'></polyline></svg>") center/22px no-repeat;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+  background: #f6f4ee url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2366857b' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'><polyline points='9 7 4 12 9 17'></polyline><polyline points='15 7 20 12 15 17'></polyline></svg>") center/20px no-repeat;
+}
+.compare .compare-tag {
+  position: absolute;
+  top: 14px;
+  font-size: 10px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: #f6f4ee;
+  background: rgba(47, 62, 57, 0.55);
+  padding: 5px 9px;
 }
 .compare input[type="range"] {
   position: absolute;
@@ -122,25 +167,31 @@
 .faq-answer > div {
   overflow: hidden;
 }
-.faq-item[data-open="true"] .faq-chevron {
-  transform: rotate(180deg);
+.faq-icon {
+  position: relative;
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
 }
-.faq-chevron {
+.faq-icon::before,
+.faq-icon::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 14px;
+  height: 1px;
+  background: currentColor;
   transition: transform 0.25s ease;
+}
+.faq-icon::after {
+  transform: rotate(90deg);
+}
+.faq-item[data-open="true"] .faq-icon::after {
+  transform: rotate(0deg);
 }
 
 /* Mobile menu */
 #mobile-menu[data-open="false"] {
   display: none;
-}
-
-/* Simple fade-up utility for on-scroll reveal (progressive enhancement) */
-.reveal {
-  opacity: 0;
-  transform: translateY(16px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
-}
-.reveal.in-view {
-  opacity: 1;
-  transform: translateY(0);
 }

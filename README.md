@@ -68,6 +68,9 @@ Não é necessário Node.js no servidor — o Tailwind já foi compilado para `a
 
 ## Paleta e tipografia (identidade visual)
 
-- Verde: `#66857b` | Bege claro: `#e4ded0` | Bege escuro: `#b9aa8d`
-- Tipografia primária (Antigua, no material de marca) → substituída por **Fraunces** (Google Fonts), visual serifado semelhante.
-- Tipografia secundária (Acumin) → substituída por **Inter** (Google Fonts).
+Seguem o manual de marca da Dra. Mariana (definidos em `tailwind.config.js`):
+
+- Verde `#66857b` (primária) · Bege `#e4ded0` · Areia `#b9aa8d` — o site usa só essas três cores (mais tons claros do bege para fundo).
+- Tipografia primária **Antigua** e secundária **Acumin Variable Concept**. Como são fontes pagas, o site carrega por enquanto as alternativas gratuitas mais próximas do Google Fonts: **Jost Light** (títulos) e **Archivo** (textos).
+- Para usar as fontes oficiais: coloque os arquivos licenciados em `assets/fonts/` e declare `@font-face` com os nomes `Antigua` e `Acumin Variable Concept` no `src/input.css`. Elas já estão em primeiro lugar na lista de fontes, então passam a valer automaticamente depois do `npm run build`.
+- Horário de atendimento: segunda a sábado, com agendamento prévio.
