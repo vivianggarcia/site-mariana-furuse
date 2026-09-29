@@ -140,7 +140,7 @@
     {
       id: "clareamento",
       title: "Clareamento dental supervisionado",
-      desc: "Sorriso iluminado e natural com protocolos de consultório ou caseiro supervisionado, com sessão de dessensibilização a laser inclusa.",
+      desc: "Sorriso iluminado e natural com protocolos de consultório ou caseiro supervisionado, acompanhamento de perto e controle da sensibilidade com protocolo a laser incluso.",
       cat: "estetica",
       tag: "Resultado Real",
       home: true,
