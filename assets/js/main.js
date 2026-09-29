@@ -101,6 +101,11 @@
         before: "assets/casos/antes-clareamento.jpg",
         after: "assets/casos/depois-clareamento.jpg"
       },
+      bruxismo: {
+        title: "Placa de bruxismo (placa oclusal)",
+        before: "assets/casos/antes-bruxismo.jpg",
+        after: "assets/casos/depois-bruxismo.jpg"
+      },
       esportivo: {
         title: "Protetor bucal esportivo personalizado",
         before: "assets/casos/antes-protetor.jpg",
