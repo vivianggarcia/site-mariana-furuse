@@ -101,11 +101,6 @@
         before: "assets/casos/antes-clareamento.jpg",
         after: "assets/casos/depois-clareamento.jpg"
       },
-      estetica: {
-        title: "Estética dental e restaurações",
-        before: "assets/casos/antes-estetica.jpg",
-        after: "assets/casos/depois-estetica.jpg"
-      },
       esportivo: {
         title: "Protetor bucal esportivo personalizado",
         before: "assets/casos/antes-protetor.jpg",
